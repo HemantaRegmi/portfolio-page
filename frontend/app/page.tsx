@@ -3,6 +3,7 @@
 import Navbar from "@/components/navbar";
 import Hero from "@/sections/hero";
 import About from "@/sections/about";
+import Skills from "@/sections/skills";
 import Image from "next/image";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <About />
+        <Skills />
       </main>
     </div>
   );
