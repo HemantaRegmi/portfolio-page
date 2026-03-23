@@ -7,7 +7,7 @@ import Skills from "@/sections/skills";
 import Image from "next/image";
 import Experience from "@/sections/experience";
 import Education from "@/sections/education";
-import Projects from "./sections/projects";
+import { Projects } from "@/sections/projects";
 
 export default function Home() {
   return (

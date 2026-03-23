@@ -1,5 +1,6 @@
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { Briefcase, Calendar, MapPin, GraduationCap } from "lucide-react";
+import { useState } from "react";
 
 const experiences = [
   {
@@ -35,26 +36,14 @@ const experiences = [
       "Processed and annotated multiple transcripts to generate high-quality training datasets with domain-specific metadata.",
     ],
   },
-  {
-    id: 3,
-    type: "education",
-    role: "Bachelor of Science in Software Engineering",
-    company: "The University of Texas at Dallas",
-    logo: "UTD",
-    period: "September 2021 - December 2025",
-    location: "Richardson, TX",
-    description: [
-      "Relevant Coursework: Data Structures and Algorithms Analysis, Software Project Planning and Management, Foundations of Machine Learning.",
-    ],
-  },
 ];
 
 export default function Experience() {
   return (
     <section id="experience" className="py-24 relative overflow-hidden">
       {/* Background gradients for liquid feel */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-sky-200/40 to-transparent pointer-events-none blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-teal-100/40 to-transparent pointer-events-none blur-3xl" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-sky-200/40 to-transparent pointer-events-none blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-1/2 h-full bg-linear-to-r from-teal-100/40 to-transparent pointer-events-none blur-3xl" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
@@ -87,7 +76,7 @@ export default function Experience() {
         <div className="relative mt-24">
           {/* Vertical line - Glossy blue */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1.5 bg-white/60 border border-white/80 rounded-full shadow-[0_0_15px_rgba(14,165,233,0.2)]" />
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-sky-300 via-blue-400 to-transparent" />
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-linear-to-b from-sky-300 via-blue-400 to-transparent" />
 
           <div className="space-y-16">
             {experiences.map((exp, index) => (
@@ -113,11 +102,8 @@ export default function Experience() {
                 {/* Content Card */}
                 <div className="w-full md:w-[45%]">
                   <div className="bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-8 hover:bg-white/35 transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] relative overflow-hidden group-hover:-translate-y-2">
-                    {/* Glossy top highlight */}
-                    <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-sky-400 to-blue-500 opacity-80" />
-
                     <div className="flex items-center gap-5 mb-6">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-50 to-white border border-white shadow-[0_4px_12px_rgba(0,0,0,0.05),0_2px_4px_rgba(255,255,255,1)_inset] flex items-center justify-center text-2xl font-black text-sky-600">
+                      <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-sky-50 to-white border border-white shadow-[0_4px_12px_rgba(0,0,0,0.05),0_2px_4px_rgba(255,255,255,1)_inset] flex items-center justify-center text-2xl font-black text-sky-600">
                         {exp.logo}
                       </div>
                       <div>
