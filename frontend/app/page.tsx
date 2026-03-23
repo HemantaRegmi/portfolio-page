@@ -5,6 +5,9 @@ import Hero from "@/sections/hero";
 import About from "@/sections/about";
 import Skills from "@/sections/skills";
 import Image from "next/image";
+import Experience from "@/sections/experience";
+import Education from "@/sections/education";
+import Projects from "./sections/projects";
 
 export default function Home() {
   return (
@@ -28,6 +31,9 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
+        <Experience />
+        <Education />
+        <Projects />
       </main>
     </div>
   );
