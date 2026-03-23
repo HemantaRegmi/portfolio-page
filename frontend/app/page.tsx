@@ -8,6 +8,7 @@ import Image from "next/image";
 import Experience from "@/sections/experience";
 import Education from "@/sections/education";
 import { Projects } from "@/sections/projects";
+import Contact from "./sections/contact";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
         <Experience />
         <Education />
         <Projects />
+        <Contact />
       </main>
     </div>
   );
