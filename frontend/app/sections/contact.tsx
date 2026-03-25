@@ -49,11 +49,11 @@ export default function Contact() {
               transition={{ delay: 0.1 }}
               className="relative group cursor-pointer"
             >
-              <div className="absolute -inset-1 bg-linear-to-br from-[#3B9DD8]/30 to-[#4DA8DA]/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
+              <div className="absolute -inset-1 bg-linear-to-br  rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
 
               <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-[#4DA8DA]/20 to-[#3B9DD8]/20 flex items-center justify-center flex-shrink-0">
+                  <div className="w-16 h-16 rounded-2xl bg-linear-to-br  flex items-center justify-center shrink-0">
                     <Mail className="w-7 h-7 text-[#4DA8DA]" />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -76,11 +76,11 @@ export default function Contact() {
               transition={{ delay: 0.2 }}
               className="relative group"
             >
-              <div className="absolute -inset-1 bg-linear-to-br from-[#3B9DD8]/30 to-[#4DA8DA]/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
+              <div className="absolute -inset-1 bg-linear-to-br  rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
 
               <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-[#4DA8DA]/20 to-[#3B9DD8]/20 flex items-center justify-center flex-shrink-0">
+                  <div className="w-16 h-16 rounded-2xl bg-linear-to-br  flex items-center justify-center shrink-0">
                     <MapPin className="w-7 h-7 text-[#4DA8DA]" />
                   </div>
                   <div>
@@ -208,7 +208,7 @@ export default function Contact() {
             className="relative group w-full"
           >
             {/* Outer glow */}
-            <div className="absolute -inset-1 bg-linear-to-br from-[#3B9DD8]/30 to-[#4DA8DA]/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
+            <div className="absolute -inset-1 bg-linear-to-br rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
 
             {/* Main form card with light glass effect */}
 

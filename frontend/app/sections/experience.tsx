@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { Briefcase, Calendar, MapPin, GraduationCap } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 const experiences = [
   {
@@ -8,7 +9,7 @@ const experiences = [
     type: "work",
     role: "Programmer Analyst I",
     company: "UTHealth Houston - School of Public Health",
-    logo: "UH",
+    logo: "/images/ut-health-logo.png",
     period: "February 2026 - Present",
     location: "Houston, TX",
     description: [
@@ -24,7 +25,7 @@ const experiences = [
     type: "work",
     role: "Research Support Assistant (Software Dev Intern)",
     company: "UTHealth Houston - Institute on Aging",
-    logo: "UH",
+    logo: "/images/ut-health-logo.png",
     period: "August 2025 - January 2025", // Keeping as written in resume
     location: "Houston, TX",
     description: [
@@ -41,7 +42,7 @@ const experiences = [
 export default function Experience() {
   return (
     <section id="experience" className="py-24 relative overflow-hidden">
-      {/* Background gradients for liquid feel */}
+      {/* Background colors */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-sky-200/40 to-transparent pointer-events-none blur-3xl" />
       <div className="absolute bottom-0 left-0 w-1/2 h-full bg-linear-to-r from-teal-100/40 to-transparent pointer-events-none blur-3xl" />
 
@@ -104,12 +105,19 @@ export default function Experience() {
                   <div className="bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-8 hover:bg-white/35 transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] relative overflow-hidden group-hover:-translate-y-2">
                     <div className="flex items-center gap-5 mb-6">
                       <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-sky-50 to-white border border-white shadow-[0_4px_12px_rgba(0,0,0,0.05),0_2px_4px_rgba(255,255,255,1)_inset] flex items-center justify-center text-2xl font-black text-sky-600">
-                        {exp.logo}
+                        <Image
+                          src={exp.logo}
+                          alt={exp.company}
+                          width={32}
+                          height={32}
+                          className="object-contain"
+                        />
                       </div>
                       <div>
                         <h3 className="text-2xl font-extrabold text-slate-800 group-hover:text-sky-600 transition-colors">
                           {exp.role}
                         </h3>
+
                         <p className="text-lg font-bold text-slate-500">
                           {exp.company}
                         </p>
@@ -117,11 +125,12 @@ export default function Experience() {
                     </div>
 
                     <div className="flex flex-col xl:flex-row xl:items-center gap-3 xl:gap-4 text-sm text-slate-600 mb-6 font-bold">
-                      <div className="flex items-center gap-2 bg-white/70 px-4 py-2 rounded-full border border-white shadow-sm">
+                      <div className="flex items-center gap-2  px-4 py-2 rounded-full  ">
                         <Calendar className="w-4 h-4 text-sky-500" />
                         {exp.period}
                       </div>
-                      <div className="flex items-center gap-2 bg-white/70 px-4 py-2 rounded-full border border-white shadow-sm">
+                      <p>•</p>
+                      <div className="flex items-center gap-2  px-4 py-2 rounded-full">
                         <MapPin className="w-4 h-4 text-[#4DA8DA]" />
                         {exp.location}
                       </div>

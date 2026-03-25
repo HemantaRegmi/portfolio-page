@@ -54,7 +54,7 @@ export default function About() {
           >
             About Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#4DA8DA] to-[#3B9DD8] mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-linear-to-r  mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -70,11 +70,11 @@ export default function About() {
             <div className="flex justify-center lg:justify-start mb-8">
               <div className="relative group">
                 {/* Outer glow ring */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#3B9DD8] via-[#4DA8DA] to-[#2d7bb8] rounded-full opacity-30 blur-lg group-hover:opacity-50 transition duration-500"></div>
+                <div className="absolute -inset-1 bg-linear-to-r rounded-full opacity-30 blur-lg group-hover:opacity-50 transition duration-500"></div>
 
                 {/* Glassmorphic border */}
                 <div className="relative w-64 h-64 rounded-full p-2 bg-[rgba(255,255,255,0.01)] backdrop-blur-xl border-2 border-[rgba(255,255,255,0.05)] shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
-                  <div className="w-full h-full rounded-full overflow-hidden border-4 border-[rgba(255,255,255,0.05)] shadow-inner bg-gradient-to-br from-[#2d5a3d]/20 via-[#1a2820]/30 to-[#1f3d2a]/20 backdrop-blur-sm">
+                  <div className="w-full h-full rounded-full overflow-hidden border-4 border-[rgba(255,255,255,0.05)] shadow-inner bg-linear-to-br backdrop-blur-sm">
                     {/* TODO: Add your professional headshot here */}
                     {/* Example: <img src="path/to/your/image.jpg" alt="Hemanta Regmi" className="w-full h-full object-cover" /> */}
                   </div>
@@ -123,14 +123,14 @@ export default function About() {
                 className="relative group"
               >
                 {/* Outer glow effect on hover */}
-                <div className="absolute -inset-1 bg-gradient-to-br from-[#3B9DD8]/30 to-[#4DA8DA]/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
+                <div className="absolute -inset-1 bg-linear-to-br  rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
 
                 {/* Light glassmorphic card */}
                 <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-5 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_12px_40px_rgba(77,168,218,0.2)] transition-all duration-300">
                   <div className="flex items-start gap-4">
                     {/* Icon container with light glass effect */}
-                    <div className="relative w-14 h-14 flex-shrink-0">
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#4DA8DA]/20 to-[#3B9DD8]/20 rounded-xl opacity-60 blur-md"></div>
+                    <div className="relative w-14 h-14 shrink-0">
+                      <div className="absolute inset-0 bg-linear-to-br rounded-xl opacity-60 blur-md"></div>
 
                       <div className="relative w-full h-full rounded-xl overflow-hidden bg-white/50 border-2 border-[#4DA8DA]/40">
                         <div className="absolute inset-0 flex items-center justify-center">
