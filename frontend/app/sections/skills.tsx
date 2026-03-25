@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Search, Database, Globe, Cloud, Code2, Coffee } from "lucide-react";
+import { Search, Database, Code2, Coffee } from "lucide-react";
 
 const skillsList = [
   // Languages

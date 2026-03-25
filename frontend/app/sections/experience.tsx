@@ -12,6 +12,7 @@ const experiences = [
     logo: "/images/ut-health-logo.png",
     period: "February 2026 - Present",
     location: "Houston, TX",
+    moreInfo: "hi",
     description: [
       "Lead, develop, and maintain full-stack applications supporting aging and public-health research using Next.js, React, Node.js, TypeScript, and AWS.",
       "Translate researcher requirements into technical specifications, feature designs, and backend workflows.",
@@ -28,6 +29,7 @@ const experiences = [
     logo: "/images/ut-health-logo.png",
     period: "August 2025 - January 2025", // Keeping as written in resume
     location: "Houston, TX",
+    moreInfo: "hi",
     description: [
       "Rebuilt and modernized the Aging in Place website using Next.js, React, Tailwind, and component-driven architecture to improve accessibility for older adults.",
       "Developed production-ready AWS infrastructure including S3 static hosting, secure file organization, and IAM role management.",

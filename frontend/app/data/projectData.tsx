@@ -28,7 +28,7 @@ export const projects: Project[] = [
     timeframe: "Sep 2023 - Dec 2023",
   },
   {
-    title: "Knowledge Management AI",
+    title: "Knowledge Management System",
     description:
       "Developed an AI-assisted search platform CRUD app to help consultants retrieve meeting information via natural language queries. Designed a responsive UI and integrated it with Spring Boot APIs.",
     detailedDescription:
@@ -40,19 +40,7 @@ export const projects: Project[] = [
     live: null,
     timeframe: "Jun 2024 - Aug 2024",
   },
-  {
-    title: "Aging in Place Portal",
-    description:
-      "Modernized web architecture using a component-driven approach to improve accessibility. Engineered AWS cloud infrastructure for secure, scalable static hosting and IAM management.",
-    detailedDescription:
-      "A modern web portal focused on helping seniors age independently in their homes. Built with Next.js and React for optimal performance, the site features WCAG 2.1 AA accessibility compliance, component-based architecture for maintainability, AWS S3 static hosting with CloudFront CDN for global delivery, IAM policies for secure resource access, and Tailwind CSS for responsive design. Improved page load times by 60% and accessibility scores by 40%.",
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
-    gradient: "from-blue-400 to-indigo-500",
-    github: "https://github.com/hemantaregmi/aging-in-place",
-    live: "https://aginginplace.example.com",
-    timeframe: "Jan 2024 - May 2024",
-  },
+
   {
     title: "PrioritiesAI Data Pipeline",
     description:
@@ -67,7 +55,7 @@ export const projects: Project[] = [
     timeframe: "Jun 2024 - Aug 2024",
   },
   {
-    title: "Portfolio Website",
+    title: "Portfolio Page",
     description:
       "Built a fully responsive single-page portfolio using React and Tailwind with a glassmorphic design system. Features honeycomb skill layout, timeline components, and smooth animations.",
     detailedDescription:
@@ -79,47 +67,74 @@ export const projects: Project[] = [
     live: "https://hemantaregmi.dev",
     timeframe: "Mar 2025 - Present",
   },
+
   {
-    title: "E-Commerce Platform",
+    title: "Yelp Camp",
     description:
-      "Developed a full-stack online shopping platform with product catalog, shopping cart, user authentication, and payment integration using modern web technologies.",
+      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
     detailedDescription:
-      "A comprehensive e-commerce solution with advanced features including product search and filtering, shopping cart with persistent sessions, secure user authentication and profile management, Stripe payment integration, order history and tracking, admin dashboard for inventory management, and responsive design for mobile shopping. Implemented RESTful APIs and optimized database queries for fast page loads.",
+      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
     image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-    gradient: "from-amber-400 to-orange-500",
-    github: "https://github.com/hemantaregmi/ecommerce-platform",
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+    gradient: "from-red-400 to-rose-500",
+    github: "https://github.com/hemantaregmi/security-audit",
     live: null,
-    timeframe: "Aug 2023 - Nov 2023",
+    timeframe: "Dec 2023 - Mar 2024",
   },
   {
-    title: "Real-Time Chat App",
+    title: "My Aging In Place Migration",
     description:
-      "Created a real-time messaging app with WebSocket integration, user presence indicators, typing notifications, and message persistence using React and Node.js.",
+      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
     detailedDescription:
-      "A feature-rich real-time communication platform built with modern web technologies. Includes WebSocket connections for instant messaging, online/offline user presence tracking, typing indicators and read receipts, message history with MongoDB persistence, user authentication with JWT tokens, private and group chat rooms, file sharing capabilities, and emoji reactions. Supports hundreds of concurrent users with optimized connection pooling.",
+      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
     image:
-      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&q=80",
-    gradient: "from-cyan-400 to-teal-500",
-    github: "https://github.com/hemantaregmi/realtime-chat",
-    live: "https://chat.hemantaregmi.dev",
-    timeframe: "Feb 2024 - Apr 2024",
-  },
-  {
-    title: "ML Dashboard",
-    description:
-      "Built an interactive dashboard for visualizing ML model performance metrics, training progress, and dataset statistics with real-time updates and responsive charts.",
-    detailedDescription:
-      "An advanced visualization platform for monitoring machine learning experiments. Features include real-time metric tracking with WebSocket updates, interactive charts using Recharts for accuracy, loss, and custom metrics, experiment comparison across multiple runs, hyperparameter visualization and analysis, dataset exploration tools, model versioning and deployment tracking, and exportable reports in PDF format. Integrates with popular ML frameworks like TensorFlow and PyTorch.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    gradient: "from-lime-400 to-green-500",
-    github: "https://github.com/hemantaregmi/ml-dashboard",
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+    gradient: "from-red-400 to-rose-500",
+    github: "https://github.com/hemantaregmi/security-audit",
     live: null,
-    timeframe: "Oct 2023 - Jan 2024",
+    timeframe: "Dec 2023 - Mar 2024",
   },
   {
-    title: "Security Audit Tool",
+    title: "Well Aged Care",
+    description:
+      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
+    detailedDescription:
+      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+    image:
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+    gradient: "from-red-400 to-rose-500",
+    github: "https://github.com/hemantaregmi/security-audit",
+    live: null,
+    timeframe: "Dec 2023 - Mar 2024",
+  },
+  {
+    title: "Hippa Compliant API Routes",
+    description:
+      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
+    detailedDescription:
+      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+    image:
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+    gradient: "from-red-400 to-rose-500",
+    github: "https://github.com/hemantaregmi/security-audit",
+    live: null,
+    timeframe: "Dec 2023 - Mar 2024",
+  },
+  {
+    title: "My Health Priorities 2.0",
+    description:
+      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
+    detailedDescription:
+      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+    image:
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+    gradient: "from-red-400 to-rose-500",
+    github: "https://github.com/hemantaregmi/security-audit",
+    live: null,
+    timeframe: "Dec 2023 - Mar 2024",
+  },
+  {
+    title: "Personal LLM News Outlet",
     description:
       "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
     detailedDescription:

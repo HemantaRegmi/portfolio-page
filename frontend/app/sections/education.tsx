@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 
 export default function Education() {
