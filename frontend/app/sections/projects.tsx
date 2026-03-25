@@ -11,8 +11,8 @@ export function Projects() {
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
       {/* Background gradients */}
-      <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-[#3B9DD8]/20 to-transparent pointer-events-none blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#4DA8DA]/10 to-transparent pointer-events-none blur-3xl" />
+      <div className="absolute top-0 left-0 w-1/2 h-full bg-linear-to-r from-[#3B9DD8]/20 to-transparent pointer-events-none blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-1/2 h-full bg-linear-to-l from-[#4DA8DA]/10 to-transparent pointer-events-none blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}

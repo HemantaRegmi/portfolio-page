@@ -34,7 +34,7 @@ export default function Education() {
           className="max-w-4xl mx-auto relative group"
         >
           {/* Outer glow */}
-          <div className="absolute -inset-1 bg-linear-to-br from-[#3B9DD8]/30 to-[#4DA8DA]/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
+          <div className="absolute -inset-1 bg-linear-to-br rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
 
           {/* Main card with light glass effect */}
           <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] transition-all duration-300 overflow-hidden">
