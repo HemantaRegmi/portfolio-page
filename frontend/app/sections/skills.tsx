@@ -208,7 +208,7 @@ export default function Skills() {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto mb-16 relative group"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-[#3B9DD8] to-[#4DA8DA] rounded-full blur-xl group-hover:blur-2xl transition-all duration-300 opacity-20" />
+          <div className="absolute inset-0 bg-linear-to-r from-[#3B9DD8] to-[#4DA8DA] rounded-full blur-xl group-hover:blur-2xl transition-all duration-300 opacity-20" />
           <div className="relative flex items-center bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] overflow-hidden p-2">
             <Search className="w-6 h-6 text-[#4DA8DA] ml-4 mr-2" />
             <input
@@ -230,7 +230,7 @@ export default function Skills() {
         </motion.div>
 
         {/* Honeycomb Skills Grid */}
-        <div className="relative min-h-[600px] flex items-center justify-center">
+        <div className="relative min-h-150 flex items-center justify-center">
           <AnimatePresence mode="wait">
             {filteredSkills.length === 0 ? (
               <motion.div
