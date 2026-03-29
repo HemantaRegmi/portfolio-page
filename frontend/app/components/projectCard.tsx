@@ -29,12 +29,12 @@ export function ProjectCard({ project, index, onMoreInfo }: ProjectCardProps) {
         {/* Project Image */}
         <div className="relative z-10 mb-6 -mx-8 -mt-8">
           <div className="w-full h-48 overflow-hidden rounded-t-3xl">
-            {/* <Image
+            <Image
               src={project.image}
               alt={project.title}
               fill
               className="w-full h-full object-cover"
-            /> */}
+            />
           </div>
         </div>
 
@@ -55,7 +55,7 @@ export function ProjectCard({ project, index, onMoreInfo }: ProjectCardProps) {
         </div>
 
         {/* Description */}
-        <p className="relative z-10 text-gray-700 mb-6 leading-relaxed font-medium flex-grow">
+        <p className="relative z-10 text-gray-700 mb-6 leading-relaxed font-medium grow">
           {project.description}
         </p>
 

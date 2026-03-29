@@ -20,8 +20,8 @@ export const projects: Project[] = [
       "Built an SVM-based supervised learning pipeline using linear, polynomial, and RBF kernels. Performed cross-validation and hyperparameter tuning using 10,000 stratified samples.",
     detailedDescription:
       "This machine learning project implements a comprehensive digit classification system using Support Vector Machines (SVM). The pipeline includes data preprocessing, feature extraction, model training with multiple kernel types (linear, polynomial, and RBF), cross-validation for robust performance evaluation, and hyperparameter optimization using grid search. Achieved 97% accuracy on the test set using stratified sampling to ensure balanced class distribution.",
-    image:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80",
+    image: "/images/my-aging-in-place.png",
+
     gradient: "from-emerald-400 to-teal-500",
     github: "https://github.com/hemantaregmi/mnist-classification",
     live: null,
@@ -33,8 +33,7 @@ export const projects: Project[] = [
       "Developed an AI-assisted search platform CRUD app to help consultants retrieve meeting information via natural language queries. Designed a responsive UI and integrated it with Spring Boot APIs.",
     detailedDescription:
       "A full-stack enterprise application designed to streamline knowledge retrieval for consulting teams. Features include natural language processing for intelligent search, RESTful API architecture with Spring Boot backend, DynamoDB for scalable NoSQL storage, user authentication and authorization, real-time query suggestions, and a modern responsive interface built with Bootstrap. The system significantly reduced time spent searching for meeting notes and client information.",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+    image: "/images/my-aging-in-place.png",
     gradient: "from-sky-400 to-blue-500",
     github: "https://github.com/hemantaregmi/knowledge-management",
     live: null,
@@ -47,8 +46,7 @@ export const projects: Project[] = [
       "Designed a JSON-based annotation schema to support a Retrieval-Augmented Generation (RAG) pipeline. Processed and annotated transcripts to generate high-quality training datasets.",
     detailedDescription:
       "An automated data processing pipeline for AI model training. The system includes custom JSON schema design for structured annotations, automated transcript processing and cleaning, entity recognition and tagging, quality validation checks, batch processing capabilities for large datasets, and export formats compatible with popular ML frameworks. Processed over 10,000 transcripts with 95% annotation accuracy.",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+    image: "/images/my-aging-in-place.png",
     gradient: "from-purple-400 to-violet-500",
     github: null,
     live: null,
@@ -60,8 +58,7 @@ export const projects: Project[] = [
       "Built a fully responsive single-page portfolio using React and Tailwind with a glassmorphic design system. Features honeycomb skill layout, timeline components, and smooth animations.",
     detailedDescription:
       "A modern, visually stunning portfolio website showcasing software engineering projects and skills. Features include custom glassmorphic design system inspired by Frutiger Aero aesthetics, innovative honeycomb/hexagonal skill grid layout, interactive timeline for work experience, smooth scroll animations with Motion (Framer Motion), fully responsive design optimized for all devices, and custom Space Grotesk + Inter dual-font system for optimal readability.",
-    image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80",
+    image: "/images/my-aging-in-place.png",
     gradient: "from-rose-400 to-pink-500",
     github: "https://github.com/hemantaregmi/portfolio",
     live: "https://hemantaregmi.dev",
@@ -74,8 +71,7 @@ export const projects: Project[] = [
       "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
     detailedDescription:
       "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+    image: "/images/my-aging-in-place.png",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi/security-audit",
     live: null,
@@ -87,8 +83,7 @@ export const projects: Project[] = [
       "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
     detailedDescription:
       "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+    image: "/images/my-aging-in-place.png",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi/security-audit",
     live: null,
@@ -100,8 +95,7 @@ export const projects: Project[] = [
       "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
     detailedDescription:
       "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+    image: "/images/my-aging-in-place.png",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi/security-audit",
     live: null,
@@ -113,8 +107,7 @@ export const projects: Project[] = [
       "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
     detailedDescription:
       "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+    image: "/images/my-aging-in-place.png",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi/security-audit",
     live: null,
@@ -126,8 +119,7 @@ export const projects: Project[] = [
       "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
     detailedDescription:
       "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+    image: "/images/my-aging-in-place.png",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi/security-audit",
     live: null,
@@ -139,8 +131,7 @@ export const projects: Project[] = [
       "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
     detailedDescription:
       "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
+    image: "/images/my-aging-in-place.png",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi/security-audit",
     live: null,
