@@ -65,9 +65,9 @@ export const projects: Project[] = [
   {
     title: "Personal LLM News Outlet",
     description:
-      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
+      "Created a news outlet that allows me to keep up with all the latest news regarding the tech industry.",
     detailedDescription:
-      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+      "Gathered verifiable sources and allowed the LLM to generate the valuable information in regards to my intrests without having to encounter misleading information.",
     image: "/images/news-outlet.jpg",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi",
@@ -127,9 +127,9 @@ export const projects: Project[] = [
   {
     title: "Yelp Camp",
     description:
-      "Developed a fullstack CRUD app with authentication, REST Api routes, and CDN with cloudinary",
+      "Developed a fullstack CRUD app with authentication, REST Api routes, and CDN with cloudinary.",
     detailedDescription:
-      "Built with JS, MongoDB, and Express to integrate fullstack application along with adding auth via salt, hash methods.(bcrypt)",
+      "Built with JS, MongoDB, and Express to integrate fullstack application along with adding auth via salt/hash methods. (bcrypt)",
     image: "/images/yelp-camp.jpg",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi",
