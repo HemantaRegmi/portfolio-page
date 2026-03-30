@@ -15,103 +15,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "MNIST Digit Classification",
-    description:
-      "Built an SVM-based supervised learning pipeline using linear, polynomial, and RBF kernels. Performed cross-validation and hyperparameter tuning using 10,000 stratified samples.",
-    detailedDescription:
-      "This machine learning project implements a comprehensive digit classification system using Support Vector Machines (SVM). The pipeline includes data preprocessing, feature extraction, model training with multiple kernel types (linear, polynomial, and RBF), cross-validation for robust performance evaluation, and hyperparameter optimization using grid search. Achieved 97% accuracy on the test set using stratified sampling to ensure balanced class distribution.",
-    image: "/images/machine-learning.jpg",
-
-    gradient: "from-emerald-400 to-teal-500",
-    github: "https://github.com/hemantaregmi/mnist-classification",
-    live: null,
-    timeframe: "Sep 2023 - Dec 2023",
-  },
-  {
-    title: "Knowledge Management System",
-    description:
-      "Developed an AI-assisted search platform CRUD app to help consultants retrieve meeting information via natural language queries. Designed a responsive UI and integrated it with Spring Boot APIs.",
-    detailedDescription:
-      "A full-stack enterprise application designed to streamline knowledge retrieval for consulting teams. Features include natural language processing for intelligent search, RESTful API architecture with Spring Boot backend, DynamoDB for scalable NoSQL storage, user authentication and authorization, real-time query suggestions, and a modern responsive interface built with Bootstrap. The system significantly reduced time spent searching for meeting notes and client information.",
-    image: "/images/knowledge-management.jpg",
-    gradient: "from-sky-400 to-blue-500",
-    github: "https://github.com/hemantaregmi/knowledge-management",
-    live: null,
-    timeframe: "Jun 2024 - Aug 2024",
-  },
-
-  {
-    title: "PrioritiesAI Data Pipeline",
-    description:
-      "Designed a JSON-based annotation schema to support a Retrieval-Augmented Generation (RAG) pipeline. Processed and annotated transcripts to generate high-quality training datasets.",
-    detailedDescription:
-      "An automated data processing pipeline for AI model training. The system includes custom JSON schema design for structured annotations, automated transcript processing and cleaning, entity recognition and tagging, quality validation checks, batch processing capabilities for large datasets, and export formats compatible with popular ML frameworks. Processed over 10,000 transcripts with 95% annotation accuracy.",
-    image: "/images/priorities-ai.jpg",
-    gradient: "from-purple-400 to-violet-500",
-    github: null,
-    live: null,
-    timeframe: "Jun 2024 - Aug 2024",
-  },
-  {
     title: "Portfolio Page",
     description:
       "Built a fully responsive single-page portfolio using React and Tailwind with a glassmorphic design system. Features honeycomb skill layout, timeline components, and smooth animations.",
     detailedDescription:
-      "A modern, visually stunning portfolio website showcasing software engineering projects and skills. Features include custom glassmorphic design system inspired by Frutiger Aero aesthetics, innovative honeycomb/hexagonal skill grid layout, interactive timeline for work experience, smooth scroll animations with Motion (Framer Motion), fully responsive design optimized for all devices, and custom Space Grotesk + Inter dual-font system for optimal readability.",
+      "A modern, visually stunning portfolio website showcasing software engineering projects and skills. Features include custom glassmorphic component design inspired by Frutiger Aero aesthetics, innovative honeycomb/hexagonal skill grid layout, interactive timeline for work experience, smooth scroll animations with Motion (Framer Motion), fully responsive design optimized for all devices, and custom Space Grotesk + Inter dual-font system for optimal readability.",
     image: "/images/my-aging-in-place.png",
     gradient: "from-rose-400 to-pink-500",
-    github: "https://github.com/hemantaregmi/portfolio",
+    github: "https://github.com/hemantaregmi",
     live: "https://hemantaregmi.dev",
-    timeframe: "Mar 2025 - Present",
-  },
-
-  {
-    title: "Yelp Camp",
-    description:
-      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
-    detailedDescription:
-      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
-    image: "/images/yelp-camp.jpg",
-    gradient: "from-red-400 to-rose-500",
-    github: "https://github.com/hemantaregmi/security-audit",
-    live: null,
-    timeframe: "Dec 2023 - Mar 2024",
-  },
-  {
-    title: "My Aging In Place Migration",
-    description:
-      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
-    detailedDescription:
-      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
-    image: "/images/my-aging-in-place.png",
-    gradient: "from-red-400 to-rose-500",
-    github: "https://github.com/hemantaregmi/security-audit",
-    live: null,
-    timeframe: "Dec 2023 - Mar 2024",
-  },
-  {
-    title: "Well Aged Care",
-    description:
-      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
-    detailedDescription:
-      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
-    image: "/images/well-aged-care.jpg",
-    gradient: "from-red-400 to-rose-500",
-    github: "https://github.com/hemantaregmi/security-audit",
-    live: null,
-    timeframe: "Dec 2023 - Mar 2024",
-  },
-  {
-    title: "Hippa Compliant API Routes",
-    description:
-      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
-    detailedDescription:
-      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
-    image: "/images/hippa-api-routes.jpg",
-    gradient: "from-red-400 to-rose-500",
-    github: "https://github.com/hemantaregmi/security-audit",
-    live: null,
-    timeframe: "Dec 2023 - Mar 2024",
+    timeframe: "Mar 2026 - Present",
   },
   {
     title: "My Health Priorities 2.0",
@@ -121,9 +34,34 @@ export const projects: Project[] = [
       "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
     image: "/images/my-health-priorities.png",
     gradient: "from-red-400 to-rose-500",
-    github: "https://github.com/hemantaregmi/security-audit",
+    github: "https://github.com/hemantaregmi",
     live: null,
-    timeframe: "Dec 2023 - Mar 2024",
+    timeframe: "Feb 2026 - Present",
+  },
+
+  {
+    title: "Well Aged Care",
+    description:
+      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
+    detailedDescription:
+      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+    image: "/images/well-aged-care.jpg",
+    gradient: "from-red-400 to-rose-500",
+    github: "https://github.com/hemantaregmi",
+    live: null,
+    timeframe: "Dec 2025 - Present",
+  },
+  {
+    title: "Bloodwork Analysis Tool",
+    description:
+      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
+    detailedDescription:
+      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+    image: "/images/hippa-api-routes.jpg",
+    gradient: "from-red-400 to-rose-500",
+    github: "https://github.com/hemantaregmi",
+    live: null,
+    timeframe: "Dec 2025 - Present",
   },
   {
     title: "Personal LLM News Outlet",
@@ -133,9 +71,71 @@ export const projects: Project[] = [
       "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
     image: "/images/news-outlet.jpg",
     gradient: "from-red-400 to-rose-500",
-    github: "https://github.com/hemantaregmi/security-audit",
+    github: "https://github.com/hemantaregmi",
     live: null,
-    timeframe: "Dec 2023 - Mar 2024",
+    timeframe: "Nov 2025 - Present",
+  },
+  {
+    title: "My Aging In Place Migration",
+    description:
+      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
+    detailedDescription:
+      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+    image: "/images/my-aging-in-place.png",
+    gradient: "from-red-400 to-rose-500",
+    github: "https://github.com/hemantaregmi",
+    live: "https://myaginginplace.org",
+    timeframe: "Oct 2025 - Nov 2025",
+  },
+  {
+    title: "PrioritiesAI Data Pipeline",
+    description:
+      "Designed a JSON-based annotation schema to support a Retrieval-Augmented Generation (RAG) pipeline. Processed and annotated transcripts to generate high-quality training datasets.",
+    detailedDescription:
+      "An automated data processing pipeline for AI model training. The system includes custom JSON schema design for structured annotations, automated transcript processing and cleaning, entity recognition and tagging, quality validation checks, batch processing capabilities for large datasets, and export formats compatible with popular ML frameworks. Processed over 10,000 transcripts with 95% annotation accuracy.",
+    image: "/images/priorities-ai.jpg",
+    gradient: "from-purple-400 to-violet-500",
+    github: "https://github.com/hemantaregmi",
+    live: null,
+    timeframe: "Aug 2025 - Nov 2025",
+  },
+  {
+    title: "Knowledge Management System",
+    description:
+      "Developed an AI-assisted search platform CRUD app to help consultants retrieve meeting information via natural language queries. Designed a responsive UI and integrated it with Spring Boot APIs.",
+    detailedDescription:
+      "A full-stack enterprise application designed to streamline knowledge retrieval for consulting teams. Features include natural language processing for intelligent search, RESTful API architecture with Spring Boot backend, DynamoDB for scalable NoSQL storage, user authentication and authorization, real-time query suggestions, and a modern responsive interface built with Bootstrap. The system significantly reduced time spent searching for meeting notes and client information.",
+    image: "/images/knowledge-management.jpg",
+    gradient: "from-sky-400 to-blue-500",
+    github: "https://github.com/hemantaregmi",
+    live: null,
+    timeframe: "Jan 2025 - May 2025",
+  },
+
+  {
+    title: "MNIST Digit Classification",
+    description:
+      "Built an SVM-based supervised learning pipeline using linear, polynomial, and RBF kernels. Performed cross-validation and hyperparameter tuning using 10,000 stratified samples.",
+    detailedDescription:
+      "This machine learning project implements a comprehensive digit classification system using Support Vector Machines (SVM). The pipeline includes data preprocessing, feature extraction, model training with multiple kernel types (linear, polynomial, and RBF), cross-validation for robust performance evaluation, and hyperparameter optimization using grid search. Achieved 97% accuracy on the test set using stratified sampling to ensure balanced class distribution.",
+    image: "/images/machine-learning.jpg",
+
+    gradient: "from-emerald-400 to-teal-500",
+    github: "https://github.com/hemantaregmi",
+    live: null,
+    timeframe: "Mar 2025",
+  },
+  {
+    title: "Yelp Camp",
+    description:
+      "Developed a fullstack CRUD app with authentication, REST Api routes, and ",
+    detailedDescription:
+      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+    image: "/images/yelp-camp.jpg",
+    gradient: "from-red-400 to-rose-500",
+    github: "https://github.com/hemantaregmi",
+    live: null,
+    timeframe: "Sep 2024 - Dec 2024",
   },
 ];
 
@@ -169,7 +169,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         </button>
 
         {/* Project Image */}
-        {/* <div className="mb-6 -mx-8 -mt-8">
+        <div className="mb-6 -mx-8 -mt-8">
           <div className="w-full h-64 overflow-hidden rounded-t-3xl">
             <Image
               src={project.image}
@@ -178,7 +178,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               className="w-full h-full object-cover"
             />
           </div>
-        </div> */}
+        </div>
 
         <div className="p-8 pt-2">
           {/* Title */}

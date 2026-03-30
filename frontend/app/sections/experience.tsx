@@ -112,6 +112,7 @@ export default function Experience() {
           <div className="space-y-16">
             {experiences.map((exp, index) => {
               const isOpen = expandedCardId === exp.id;
+              const isUtHealthLogo = exp.logo.includes("ut-health-logo");
 
               return (
                 <motion.div
@@ -138,13 +139,21 @@ export default function Experience() {
                     <div className="bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-8 hover:bg-white/35 transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] relative overflow-hidden group-hover:-translate-y-2">
                       <div className="flex items-center gap-5 mb-6">
                         <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-sky-50 to-white border border-white shadow-[0_4px_12px_rgba(0,0,0,0.05),0_2px_4px_rgba(255,255,255,1)_inset] flex items-center justify-center text-2xl font-black text-sky-600">
-                          <Image
-                            src={exp.logo}
-                            alt={exp.company}
-                            width={32}
-                            height={32}
-                            className="object-contain"
-                          />
+                          <div
+                            className={`relative ${
+                              isUtHealthLogo ? "w-12 h-12" : "w-8 h-8"
+                            }`}
+                          >
+                            <Image
+                              src={exp.logo}
+                              alt={exp.company}
+                              fill
+                              sizes="48px"
+                              className={`object-contain object-center ${
+                                isUtHealthLogo ? "scale-110" : ""
+                              }`}
+                            />
+                          </div>
                         </div>
                         <div>
                           <h3 className="text-2xl font-extrabold text-slate-800 group-hover:text-sky-600 transition-colors">
