@@ -1,7 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
-import { ExternalLink } from "lucide-react";
-import Image from "next/image";
 import { Project, ProjectModal, projects } from "@/data/projectData";
 import { ProjectCard } from "@/components/projectCard";
 

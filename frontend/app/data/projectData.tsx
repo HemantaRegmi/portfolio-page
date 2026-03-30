@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { Github, ExternalLink } from "lucide-react";
-import Image from "next/image";
 
 export interface Project {
   title: string;
@@ -20,18 +19,18 @@ export const projects: Project[] = [
       "Built a fully responsive single-page portfolio using React and Tailwind with a glassmorphic design system. Features honeycomb skill layout, timeline components, and smooth animations.",
     detailedDescription:
       "A modern, visually stunning portfolio website showcasing software engineering projects and skills. Features include custom glassmorphic component design inspired by Frutiger Aero aesthetics, innovative honeycomb/hexagonal skill grid layout, interactive timeline for work experience, smooth scroll animations with Motion (Framer Motion), fully responsive design optimized for all devices, and custom Space Grotesk + Inter dual-font system for optimal readability.",
-    image: "/images/my-aging-in-place.png",
+    image: "/images/hero-bg.jpg",
     gradient: "from-rose-400 to-pink-500",
     github: "https://github.com/hemantaregmi",
-    live: "https://hemantaregmi.dev",
+    live: "https://hemantaregmi.com",
     timeframe: "Mar 2026 - Present",
   },
   {
     title: "My Health Priorities 2.0",
     description:
-      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
+      "Developed an application for older adults that asks them questions to figure out what matters most to them. Using realtime speech input, and using an eleven labs voice agent to provide a clinician like user experience.",
     detailedDescription:
-      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+      "Implemented using typescript, tailwind, and react for the frontend. Used ChatGPT LLM for summary generation that generates throughout the patient conversation. Impending implementation into EPIC myChart dashboard.",
     image: "/images/my-health-priorities.png",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi",
@@ -42,9 +41,9 @@ export const projects: Project[] = [
   {
     title: "Well Aged Care",
     description:
-      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
+      "Resource page for older adults and caregivers to access quality resources offered by the UT Health Houston's Institute on Aging.",
     detailedDescription:
-      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+      "Implemented WCAG 2.1 AAA accesibility into the site. Developed using Typescript, React, and Tailwind. Metadata for optimal SEO was instillewd in addition to multiple externally linked resources embedded into the website.",
     image: "/images/well-aged-care.jpg",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi",
@@ -54,9 +53,9 @@ export const projects: Project[] = [
   {
     title: "Bloodwork Analysis Tool",
     description:
-      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
+      "Creating a personal app that gives me a rundown of my latest bloodwork that gives me advice on next steps, while having the context of all my other blood records. ",
     detailedDescription:
-      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+      "Containerized via docker. Created with Typescript frontend and Django backend.",
     image: "/images/hippa-api-routes.jpg",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi",
@@ -78,9 +77,9 @@ export const projects: Project[] = [
   {
     title: "My Aging In Place Migration",
     description:
-      "Developed an automated security scanning tool that analyzes web applications for common vulnerabilities, generates detailed reports, and provides remediation recommendations.",
+      "Migrated My Aging In Place resource site into UT Health Houston infrastructure. Migrated AWS assets and set them up in house.",
     detailedDescription:
-      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+      "Inherited S3 assets into UT Health Houston AWS account. Fixed dead links and bugs.",
     image: "/images/my-aging-in-place.png",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi",
@@ -128,9 +127,9 @@ export const projects: Project[] = [
   {
     title: "Yelp Camp",
     description:
-      "Developed a fullstack CRUD app with authentication, REST Api routes, and ",
+      "Developed a fullstack CRUD app with authentication, REST Api routes, and CDN with cloudinary",
     detailedDescription:
-      "A comprehensive security analysis tool for web applications. Scans for OWASP Top 10 vulnerabilities including XSS, SQL injection, and CSRF attacks, performs automated penetration testing, analyzes dependency vulnerabilities, generates detailed security reports with risk ratings, provides actionable remediation steps, integrates with CI/CD pipelines for continuous security testing, and includes a dashboard for tracking security posture over time.",
+      "Built with JS, MongoDB, and Express to integrate fullstack application along with adding auth via salt, hash methods.(bcrypt)",
     image: "/images/yelp-camp.jpg",
     gradient: "from-red-400 to-rose-500",
     github: "https://github.com/hemantaregmi",
@@ -167,18 +166,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         >
           <span className="text-2xl text-gray-700">&times;</span>
         </button>
-
-        {/* Project Image */}
-        <div className="mb-6 -mx-8 -mt-8">
-          <div className="w-full h-64 overflow-hidden rounded-t-3xl">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
 
         <div className="p-8 pt-2">
           {/* Title */}
