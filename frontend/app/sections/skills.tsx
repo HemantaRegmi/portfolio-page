@@ -37,7 +37,6 @@ const skillsList = [
   {
     name: "JavaScript",
     category: "Language",
-    icon: "/svgs/javascript.svg",
   },
   {
     name: "TypeScript",
