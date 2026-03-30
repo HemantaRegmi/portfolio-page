@@ -1,42 +1,13 @@
-import { useState, useMemo, type ReactNode } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import Image from "next/image";
 import { Search, Database, Code2, Coffee } from "lucide-react";
-
-const skillIconMap: Record<string, string> = {
-  JavaScript: "/svgs/javascript.svg",
-  TypeScript: "/svgs/typescript-svgrepo-com.svg",
-  Python: "/svgs/python-svgrepo-com (1).svg",
-  "C++": "/svgs/c-plus-plus-svgrepo-com.svg",
-  "Next.js": "/svgs/next-dot-js-svgrepo-com.svg",
-  React: "/svgs/react-svgrepo-com.svg",
-  Vue: "/svgs/vue.svg",
-  "Tailwind CSS": "/svgs/tailwind-svgrepo-com.svg",
-  "Node.js": "/svgs/node-js-svgrepo-com.svg",
-  Express: "/svgs/express-svgrepo-com.svg",
-  "Spring Boot": "/svgs/spring-boot-svgrepo-com.svg",
-  Django: "/svgs/django-svgrepo-com.svg",
-  Mongoose: "/svgs/mongodb-svgrepo-com.svg",
-  Bootstrap: "/svgs/bootstrap-svgrepo-com.svg",
-  MongoDB: "/svgs/mongodb-svgrepo-com.svg",
-  PostgreSQL: "/svgs/pgsql-svgrepo-com.svg",
-  MySQL: "/svgs/mysql-logo-svgrepo-com.svg",
-  AWS: "/svgs/aws-svgrepo-com.svg",
-  "Microsoft Azure": "/svgs/azure-icon-svgrepo-com.svg",
-  Vercel: "/svgs/vercel-icon-svgrepo-com.svg",
-  Docker: "/svgs/docker-icon-svgrepo-com.svg",
-  Figma: "/svgs/figma-svgrepo-com.svg",
-  "REST APIs": "/svgs/api-svgrepo-com.svg",
-  "Linux/Unix": "/svgs/linux-svgrepo-com.svg",
-  Git: "/svgs/git-svgrepo-com.svg",
-  Jest: "/svgs/jest-svgrepo-com.svg",
-};
 
 const skillsList = [
   // Languages
   {
     name: "JavaScript",
     category: "Language",
+    icon: "/svgs/javascript.svg",
   },
   {
     name: "TypeScript",
@@ -198,27 +169,6 @@ const skillsList = [
 export default function Skills() {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const getSkillIcon = (skill: { name: string; icon?: ReactNode }) => {
-    if (skill.icon) return skill.icon;
-
-    const iconSrc = skillIconMap[skill.name];
-    if (iconSrc) {
-      return (
-        <Image
-          src={iconSrc}
-          alt={`${skill.name} icon`}
-          width={32}
-          height={32}
-          className="w-8 h-8 object-contain"
-          loading="lazy"
-          unoptimized
-        />
-      );
-    }
-
-    return <Code2 className="w-8 h-8 text-[#4DA8DA]" />;
-  };
-
   const filteredSkills = useMemo(() => {
     return skillsList.filter(
       (skill) =>
@@ -293,7 +243,7 @@ export default function Skills() {
               >
                 <Search className="w-12 h-12 mb-4 opacity-40 text-[#4DA8DA]" />
                 <p className="text-xl font-medium">
-                  No skills found matching &quot;{searchTerm}&quot;
+                  No skills found matching "{searchTerm}"
                 </p>
               </motion.div>
             ) : (
@@ -340,7 +290,7 @@ export default function Skills() {
 
                       {/* Content */}
                       <div className="hexagon-content">
-                        <div className="hexagon-icon">{getSkillIcon(skill)}</div>
+                        <div className="hexagon-icon">{skill.icon}</div>
                         <div className="hexagon-text">
                           <h3 className="hexagon-title">{skill.name}</h3>
                         </div>
