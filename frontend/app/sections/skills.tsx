@@ -227,6 +227,38 @@ export default function Skills() {
     );
   }, [searchTerm]);
 
+  const positionedSkills = useMemo(() => {
+    const positioned: Array<{
+      skill: (typeof skillsList)[number];
+      row: number;
+      col: number;
+      offset: boolean;
+    }> = [];
+    let cursor = 0;
+    let useFourItems = true;
+    let row = 0;
+
+    while (cursor < filteredSkills.length) {
+      const rowSize = useFourItems ? 4 : 3;
+      const rowItems = filteredSkills.slice(cursor, cursor + rowSize);
+
+      rowItems.forEach((skill, col) => {
+        positioned.push({
+          skill,
+          row,
+          col,
+          offset: !useFourItems,
+        });
+      });
+
+      cursor += rowSize;
+      useFourItems = !useFourItems;
+      row += 1;
+    }
+
+    return positioned;
+  }, [filteredSkills]);
+
   return (
     <section id="skills" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(77,168,218,0.1),transparent_60%)] pointer-events-none" />
@@ -304,7 +336,7 @@ export default function Skills() {
                 exit={{ opacity: 0 }}
                 className="honeycomb-container"
               >
-                {filteredSkills.map((skill, index) => (
+                {positionedSkills.map(({ skill, row, col, offset }, index) => (
                   <motion.div
                     key={skill.name}
                     initial={{ opacity: 0, scale: 0 }}
@@ -318,6 +350,11 @@ export default function Skills() {
                       damping: 15,
                     }}
                     className="hexagon-wrapper"
+                    style={{
+                      gridRowStart: row + 1,
+                      gridColumnStart: offset ? col * 2 + 2 : col * 2 + 1,
+                      gridColumnEnd: "span 2",
+                    }}
                   >
                     <div className="hexagon group">
                       {/* SVG Border */}
@@ -327,10 +364,10 @@ export default function Skills() {
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <polygon
-                          points="50 2, 98 27.5, 98 86.5, 50 113, 2 86.5, 2 27.5"
+                          points="50 0, 100 28.75, 100 86.25, 50 115, 0 86.25, 0 28.75"
                           fill="none"
-                          stroke="rgba(77, 168, 218, 0.4)"
-                          strokeWidth="3"
+                          stroke="rgba(77, 168, 218, 0.5)"
+                          strokeWidth="7"
                           className="hexagon-stroke"
                         />
                       </svg>
@@ -360,13 +397,13 @@ export default function Skills() {
         dangerouslySetInnerHTML={{
           __html: `
         .honeycomb-container {
-          display: flex;
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: repeat(8, 80px);
+          grid-auto-rows: 138px;
           justify-content: center;
           max-width: 1200px;
           margin: 0 auto;
-          gap: 8px;
-          padding: 20px;
+          padding: 10px 20px;
         }
 
         .hexagon-wrapper {
@@ -374,12 +411,7 @@ export default function Skills() {
           height: 184px;
           position: relative;
           margin: 0;
-        }
-
-        .hexagon-wrapper:nth-child(7n+5),
-        .hexagon-wrapper:nth-child(7n+6),
-        .hexagon-wrapper:nth-child(7n+7) {
-          margin-left: 84px;
+          align-self: start;
         }
 
         .hexagon {
@@ -407,12 +439,14 @@ export default function Skills() {
         }
 
         .hexagon-stroke {
-          transition: stroke 0.4s ease, stroke-width 0.4s ease;
+          transition: stroke 0.3s ease;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+          vector-effect: non-scaling-stroke;
         }
 
         .hexagon:hover .hexagon-stroke {
-          stroke: rgba(77, 168, 218, 0.8);
-          stroke-width: 4;
+          stroke: rgba(77, 168, 218, 0.7);
         }
 
         .hexagon-glow {
@@ -432,7 +466,7 @@ export default function Skills() {
 
         .hexagon:hover {
           background: rgba(255, 255, 255, 0.4);
-          transform: translateY(-8px) scale(1.05);
+          transform: translateY(-6px);
           box-shadow: 0 16px 40px rgba(77, 168, 218, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
 
@@ -483,18 +517,16 @@ export default function Skills() {
 
         @media (max-width: 768px) {
           .honeycomb-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
             gap: 4px;
           }
 
           .hexagon-wrapper {
             width: 120px;
             height: 138px;
-          }
-
-          .hexagon-wrapper:nth-child(7n+5),
-          .hexagon-wrapper:nth-child(7n+6),
-          .hexagon-wrapper:nth-child(7n+7) {
-            margin-left: 64px;
           }
 
           .hexagon-content {
@@ -515,21 +547,12 @@ export default function Skills() {
           .honeycomb-container {
             justify-content: center;
             padding: 10px;
+            gap: 2px;
           }
 
           .hexagon-wrapper {
             width: 110px;
             height: 126px;
-          }
-
-          .hexagon-wrapper:nth-child(7n+5),
-          .hexagon-wrapper:nth-child(7n+6),
-          .hexagon-wrapper:nth-child(7n+7) {
-            margin-left: 0;
-          }
-
-          .hexagon-wrapper:nth-child(odd) {
-            margin-left: 0;
           }
 
           .hexagon-content {
