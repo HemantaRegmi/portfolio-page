@@ -33,11 +33,11 @@ const experiences: ExperienceItem[] = [
     period: "February 2026 - Present",
     location: "Houston, TX",
     moreInfo:
-      "In this role, I serve as the primary technical lead for multiple research-focused web applications that directly support aging and public health studies. I work closely with epidemiologists, data scientists, and researchers to understand complex research workflows and translate them into scalable, user-friendly software solutions. My responsibilities include architecting cloud-based infrastructures on AWS, implementing secure data pipelines that handle sensitive health information, and developing AI-assisted tools that leverage GPT models and RAG systems to help researchers extract insights from large datasets. I also lead code reviews, establish development best practices, and ensure all applications meet healthcare compliance standards including HIPAA considerations. Regular collaboration with cross-functional teams ensures that technical solutions align with both research goals and institutional IT policies.",
+      "At UT Health Houston, I worked within the Institute on Aging, and McGovern Medical School's information technology department. In this role, I am managing 3+ technical projects with multiple research groups focusing on older adult care. I am in the middle ground of both the IT deparment and the Institute on Aging. I manage the technical requirements from the Institute on Aging, and I translate them into software solutions based on the offered resources brought by the Medical School IT department. I conduct weekly meetings with the IT department over progress, and managing feedback and requirements from additional meetings with stakeholders.",
     description: [
-      "Lead, develop, and maintain full-stack applications supporting aging and public-health research using Next.js, React, Node.js, TypeScript, and AWS.",
+      "Lead, develop, and maintain full-stack applications supporting aging and public-health research using Next.js, React, Node.js, TypeScript, Django, Docker, Azure, and AWS.",
       "Translate researcher requirements into technical specifications, feature designs, and backend workflows.",
-      "Implement structured data pipelines and JSON-based schemas supporting AI-assisted and RAG-driven tools.",
+      "Built Dockerized application environments, maintained CI/CD pipelines, and coordinated server specification requests to support reliable deployments.",
       "Manage updates, debug issues, and optimize performance for reliability across research programs.",
       "Collaborate with IT and project teams to plan enhancements and conduct walk-throughs.",
     ],
@@ -48,10 +48,10 @@ const experiences: ExperienceItem[] = [
     role: "Research Support Assistant (Software Dev Intern)",
     company: "UTHealth Houston - Institute on Aging",
     logo: "/images/ut-health-logo.png",
-    period: "August 2025 - January 2025", // Keeping as written in resume
+    period: "August 2025 - February 2026",
     location: "Houston, TX",
     moreInfo:
-      "As a research support intern, I focused on modernizing the Aging in Place platform and strengthening its long-term maintainability for public use. I redesigned key front-end workflows with accessibility and readability in mind for older adults, then helped migrate the system to institution-owned cloud infrastructure with cleaner deployment and security controls. I partnered directly with researchers to capture content and annotation requirements, then implemented structured JSON schemas that fed early RAG-driven experiments. The tenure sharpened my product thinking by balancing user-centered UX decisions, technical execution, and stakeholder communication across healthcare and research teams.",
+      "The UT Health's Institute on Aging focueses on delivering quality solutions to improve patient qualiuty care for older adults. As a research support intern, I was tasked with the resposibility with defining the RAG schema for PrioritiesAI. I defined key terms for the bot, and marked them whenever present in gold-standard patient facilitator transcripts in order to train the bot. In addition, I contributed to testing applications that were in development by research groups. Such as My Aging in Place and PrioritiesAI. In addition, I was tasked with migrating the architecture of the My Aging in Place platform into the university. I migrated AWS S3 assets and setup the architecture within UT Health's system, and I redeployed it as well.",
     description: [
       "Rebuilt and modernized the Aging in Place website using Next.js, React, Tailwind, and component-driven architecture to improve accessibility for older adults.",
       "Developed production-ready AWS infrastructure including S3 static hosting, secure file organization, and IAM role management.",

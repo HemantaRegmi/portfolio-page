@@ -1,7 +1,19 @@
 import { useState, useMemo, type ReactNode } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
-import { Search, Database, Code2, Coffee } from "lucide-react";
+import {
+  Search,
+  Database,
+  Code2,
+  Coffee,
+  Braces,
+  BrainCircuit,
+  Workflow,
+  Cloud,
+  Bot,
+  Boxes,
+  Github,
+} from "lucide-react";
 
 const skillIconMap: Record<string, string> = {
   JavaScript: "/svgs/javascript.svg",
@@ -58,11 +70,7 @@ const skillsList = [
   {
     name: "HTML/CSS",
     category: "Language",
-    icon: (
-      <div className="flex gap-1">
-        <Code2 className="w-7 h-7 text-blue-600" />
-      </div>
-    ),
+    icon: <Braces className="w-8 h-8 text-orange-500" />,
   },
 
   // Frameworks
@@ -109,6 +117,7 @@ const skillsList = [
   {
     name: "Scikit-Learn",
     category: "Framework",
+    icon: <BrainCircuit className="w-8 h-8 text-orange-500" />,
   },
 
   // Databases
@@ -137,6 +146,7 @@ const skillsList = [
   {
     name: "Supabase",
     category: "Cloud/DevOps",
+    icon: <Database className="w-8 h-8 text-emerald-600" />,
   },
   {
     name: "Vercel",
@@ -149,10 +159,12 @@ const skillsList = [
   {
     name: "GitHub Actions",
     category: "Cloud/DevOps",
+    icon: <Workflow className="w-8 h-8 text-sky-600" />,
   },
   {
     name: "Cloudinary",
     category: "Cloud/DevOps",
+    icon: <Cloud className="w-8 h-8 text-blue-500" />,
   },
   {
     name: "Figma",
@@ -171,6 +183,7 @@ const skillsList = [
   {
     name: "OpenAI API",
     category: "AI",
+    icon: <Bot className="w-8 h-8 text-emerald-700" />,
   },
   {
     name: "RAG Pipelines",
@@ -180,6 +193,7 @@ const skillsList = [
   {
     name: "JSON Schema",
     category: "Data",
+    icon: <Boxes className="w-8 h-8 text-violet-600" />,
   },
   {
     name: "Git",
@@ -188,6 +202,7 @@ const skillsList = [
   {
     name: "GitHub",
     category: "Version Control",
+    icon: <Github className="w-8 h-8 text-gray-800" />,
   },
   {
     name: "Jest",
