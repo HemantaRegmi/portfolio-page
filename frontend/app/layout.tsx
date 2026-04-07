@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = "https://hemantaregmi.com";
 const ogImagePath = "/images/hero-bg.jpg";
+const faviconPath = "/svgs/mountain-nature-snow-svgrepo-com.svg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +48,11 @@ export const metadata: Metadata = {
   publisher: "Hemanta Regmi",
   alternates: {
     canonical: siteUrl,
+  },
+  icons: {
+    icon: faviconPath,
+    shortcut: faviconPath,
+    apple: faviconPath,
   },
   category: "technology",
   formatDetection: {
@@ -99,7 +106,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
