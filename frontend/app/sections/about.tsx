@@ -1,4 +1,7 @@
+"use client";
+
 import { motion } from "motion/react";
+import Image from "next/image";
 import { Users, Lightbulb, MessageSquare, Target, Eye } from "lucide-react";
 
 const softSkills = [
@@ -74,9 +77,15 @@ export default function About() {
 
                 {/* Glassmorphic border */}
                 <div className="relative w-64 h-64 rounded-full p-2 bg-[rgba(255,255,255,0.01)] backdrop-blur-xl border-2 border-[rgba(255,255,255,0.05)] shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
-                  <div className="w-full h-full rounded-full overflow-hidden border-4 border-[rgba(255,255,255,0.05)] shadow-inner bg-linear-to-br backdrop-blur-sm">
-                    {/* TODO: Add your professional headshot here */}
-                    {/* Example: <img src="path/to/your/image.jpg" alt="Hemanta Regmi" className="w-full h-full object-cover" /> */}
+                  <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-[rgba(255,255,255,0.05)] shadow-inner bg-linear-to-br backdrop-blur-sm">
+                    <Image
+                      src="/images/profile-image.jpeg"
+                      alt="Portrait of Hemanta Regmi"
+                      fill
+                      priority
+                      sizes="256px"
+                      className="scale-[1.95] object-cover object-center"
+                    />
                   </div>
                 </div>
               </div>

@@ -1,6 +1,8 @@
+"use client";
+
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
-import { Project, ProjectModal, projects } from "@/data/projectData";
+import { type Project, ProjectModal, projects } from "@/data/projectData";
 import { ProjectCard } from "@/components/projectCard";
 
 export function Projects() {

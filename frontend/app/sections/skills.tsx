@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useMemo, type ReactNode } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
@@ -37,9 +39,12 @@ const skillIconMap: Record<string, string> = {
   "Microsoft Azure": "/svgs/azure-icon-svgrepo-com.svg",
   Vercel: "/svgs/vercel-icon-svgrepo-com.svg",
   Docker: "/svgs/docker-icon-svgrepo-com.svg",
+  Nginx: "/svgs/nginx-logo.svg",
   Figma: "/svgs/figma-svgrepo-com.svg",
   "REST APIs": "/svgs/api-svgrepo-com.svg",
   "Linux/Unix": "/svgs/linux-svgrepo-com.svg",
+  "Apache Spark": "/svgs/apache-spark-logo.svg",
+  Hadoop: "/svgs/hadoop-logo.svg",
   Git: "/svgs/git-svgrepo-com.svg",
   Jest: "/svgs/jest-svgrepo-com.svg",
 };
@@ -157,6 +162,10 @@ const skillsList = [
     category: "Cloud/DevOps",
   },
   {
+    name: "Nginx",
+    category: "Cloud/DevOps",
+  },
+  {
     name: "GitHub Actions",
     category: "Cloud/DevOps",
     icon: <Workflow className="w-8 h-8 text-sky-600" />,
@@ -194,6 +203,14 @@ const skillsList = [
     name: "JSON Schema",
     category: "Data",
     icon: <Boxes className="w-8 h-8 text-violet-600" />,
+  },
+  {
+    name: "Apache Spark",
+    category: "Data Engineering",
+  },
+  {
+    name: "Hadoop",
+    category: "Data Engineering",
   },
   {
     name: "Git",

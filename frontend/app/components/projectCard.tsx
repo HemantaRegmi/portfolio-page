@@ -1,7 +1,9 @@
+"use client";
+
 import { motion } from "motion/react";
 import { Github, ExternalLink, Info, Calendar } from "lucide-react";
 import { useState } from "react";
-import { Project } from "@/data/projectData";
+import type { Project } from "@/data/projectData";
 import Image from "next/image";
 
 interface ProjectCardProps {
