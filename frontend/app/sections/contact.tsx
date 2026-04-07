@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 import { Mail, Github, Linkedin, ArrowRight, MapPin } from "lucide-react";
 import { useState } from "react";
-import ContactForm from "@/utils/contactForm";
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function Contact() {
@@ -27,7 +26,7 @@ export default function Contact() {
               color: "#1a202c",
             }}
           >
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <p
             className="text-xl max-w-2xl mx-auto font-medium"

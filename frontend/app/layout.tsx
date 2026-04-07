@@ -18,8 +18,69 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Hemanta Regmi",
-  description: "Portfolio page for Hemanta Regmi.",
+  metadataBase: new URL("https://hemantaregmi.com"),
+  title: {
+    default: "Hemanta Regmi | Full-Stack Software Engineer",
+    template: "%s | Hemanta Regmi",
+  },
+  description:
+    "Portfolio of Hemanta Regmi, a full-stack software engineer building scalable web applications, cloud infrastructure, and healthcare-focused digital products.",
+  keywords: [
+    "Hemanta Regmi",
+    "Hemanta Regmi portfolio",
+    "full-stack software engineer",
+    "software developer portfolio",
+    "Next.js developer",
+    "React developer",
+    "TypeScript developer",
+    "cloud infrastructure",
+    "healthcare software engineer",
+    "web developer",
+  ],
+  authors: [{ name: "Hemanta Regmi", url: "https://hemantaregmi.com" }],
+  creator: "Hemanta Regmi",
+  publisher: "Hemanta Regmi",
+  alternates: {
+    canonical: "/",
+  },
+  category: "technology",
+  openGraph: {
+    type: "website",
+    url: "https://hemantaregmi.com",
+    title: "Hemanta Regmi | Full-Stack Software Engineer",
+    description:
+      "Explore Hemanta Regmi's portfolio featuring full-stack projects, cloud architecture work, and software engineering experience.",
+    siteName: "Hemanta Regmi Portfolio",
+    images: [
+      {
+        url: "/images/hero-bg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hemanta Regmi portfolio hero background",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hemanta Regmi | Full-Stack Software Engineer",
+    description:
+      "Full-stack software engineer portfolio with projects, experience, and cloud-focused application work.",
+    images: ["/images/hero-bg.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  other: {
+    "format-detection": "telephone=no, address=no, email=no",
+  },
 };
 
 export default function RootLayout({
