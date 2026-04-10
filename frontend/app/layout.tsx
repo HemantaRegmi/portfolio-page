@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+
+const siteUrl = "https://hemantaregmi.com";
+const ogImagePath = "/images/hero-bg.jpg";
+const faviconPath = "/svgs/mountain-nature-snow-svgrepo-com.svg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +23,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hemantaregmi.com"),
+  metadataBase: new URL(siteUrl),
+  applicationName: "Hemanta Regmi Portfolio",
   title: {
     default: "Hemanta Regmi | Full-Stack Software Engineer",
     template: "%s | Hemanta Regmi",
@@ -37,23 +43,33 @@ export const metadata: Metadata = {
     "healthcare software engineer",
     "web developer",
   ],
-  authors: [{ name: "Hemanta Regmi", url: "https://hemantaregmi.com" }],
+  authors: [{ name: "Hemanta Regmi", url: siteUrl }],
   creator: "Hemanta Regmi",
   publisher: "Hemanta Regmi",
   alternates: {
-    canonical: "/",
+    canonical: siteUrl,
+  },
+  icons: {
+    icon: faviconPath,
+    shortcut: faviconPath,
+    apple: faviconPath,
   },
   category: "technology",
+  formatDetection: {
+    address: false,
+    email: false,
+    telephone: false,
+  },
   openGraph: {
     type: "website",
-    url: "https://hemantaregmi.com",
+    url: siteUrl,
     title: "Hemanta Regmi | Full-Stack Software Engineer",
     description:
       "Explore Hemanta Regmi's portfolio featuring full-stack projects, cloud architecture work, and software engineering experience.",
     siteName: "Hemanta Regmi Portfolio",
     images: [
       {
-        url: "/images/hero-bg.jpg",
+        url: ogImagePath,
         width: 1200,
         height: 630,
         alt: "Hemanta Regmi portfolio hero background",
@@ -65,7 +81,7 @@ export const metadata: Metadata = {
     title: "Hemanta Regmi | Full-Stack Software Engineer",
     description:
       "Full-stack software engineer portfolio with projects, experience, and cloud-focused application work.",
-    images: ["/images/hero-bg.jpg"],
+    images: [ogImagePath],
   },
   robots: {
     index: true,
@@ -77,9 +93,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
       "max-video-preview": -1,
     },
-  },
-  other: {
-    "format-detection": "telephone=no, address=no, email=no",
   },
 };
 
@@ -93,7 +106,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
