@@ -1,11 +1,10 @@
 import type { MetadataRoute } from "next";
+import { siteConfig } from "@/utils/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://hemantaregmi.com";
-
   return [
     {
-      url: baseUrl,
+      url: siteConfig.url,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,

@@ -328,7 +328,7 @@ export default function Skills() {
             <Search className="w-6 h-6 text-[#4DA8DA] ml-4 mr-2" />
             <input
               type="text"
-              placeholder="Search skills (e.g., React, Python, AWS)..."
+              placeholder="Search skills..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full bg-transparent border-none text-gray-800 focus:ring-0 placeholder-gray-500 text-lg px-2 py-3 outline-none font-medium"
@@ -429,9 +429,10 @@ export default function Skills() {
         dangerouslySetInnerHTML={{
           __html: `
         .honeycomb-container {
+          --hex-width: 160px;
           display: grid;
-          grid-template-columns: repeat(8, 80px);
-          grid-auto-rows: 138px;
+          grid-template-columns: repeat(8, calc(var(--hex-width) / 2));
+          grid-auto-rows: calc(var(--hex-width) * 0.8625);
           justify-content: center;
           max-width: 1200px;
           margin: 0 auto;
@@ -439,8 +440,8 @@ export default function Skills() {
         }
 
         .hexagon-wrapper {
-          width: 160px;
-          height: 184px;
+          width: var(--hex-width);
+          height: calc(var(--hex-width) * 1.15);
           position: relative;
           margin: 0;
           align-self: start;
@@ -549,24 +550,17 @@ export default function Skills() {
 
         @media (max-width: 768px) {
           .honeycomb-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-            gap: 4px;
-          }
-
-          .hexagon-wrapper {
-            width: 120px;
-            height: 138px;
+            --hex-width: clamp(86px, 21vw, 120px);
+            padding: 12px 4px;
           }
 
           .hexagon-content {
-            padding: 16px 8px;
+            padding: 14px 7px;
           }
 
           .hexagon-title {
             font-size: 12px;
+            line-height: 1.12;
           }
 
           .hexagon-category {
@@ -577,22 +571,17 @@ export default function Skills() {
 
         @media (max-width: 480px) {
           .honeycomb-container {
-            justify-content: center;
-            padding: 10px;
-            gap: 2px;
-          }
-
-          .hexagon-wrapper {
-            width: 110px;
-            height: 126px;
+            --hex-width: clamp(68px, 21vw, 96px);
+            padding: 8px 0;
           }
 
           .hexagon-content {
-            padding: 12px 6px;
+            padding: 10px 5px;
           }
 
           .hexagon-title {
-            font-size: 11px;
+            font-size: 10px;
+            line-height: 1.08;
           }
 
           .hexagon-category {

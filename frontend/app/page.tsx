@@ -7,40 +7,70 @@ import Experience from "@/sections/experience";
 import Education from "@/sections/education";
 import { Projects } from "@/sections/projects";
 import Contact from "./sections/contact";
+import Footer from "@/components/footer";
+import { identityProfiles, siteConfig } from "@/utils/site";
 
 export default function Home() {
-  const structuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Hemanta Regmi",
-      url: "https://hemantaregmi.com",
-      jobTitle: "Full-Stack Software Engineer",
-      sameAs: ["https://github.com/hemantaregmi"],
-      knowsAbout: [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Node.js",
-        "Django",
-        "AWS",
-        "Azure",
-        "Cloud Infrastructure",
-      ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Hemanta Regmi Portfolio",
-      url: "https://hemantaregmi.com",
-      description:
-        "Portfolio showcasing full-stack engineering projects, experience, and technical skills.",
-      author: {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
         "@type": "Person",
-        name: "Hemanta Regmi",
+        "@id": `${siteConfig.url}/#person`,
+        name: siteConfig.name,
+        url: siteConfig.url,
+        image: `${siteConfig.url}${siteConfig.profileImage}`,
+        jobTitle: siteConfig.role,
+        email: siteConfig.email,
+        homeLocation: {
+          "@type": "Place",
+          name: siteConfig.location,
+        },
+        sameAs: identityProfiles,
+        knowsAbout: [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Node.js",
+          "Django",
+          "AWS",
+          "Azure",
+          "Cloud Infrastructure",
+        ],
       },
-    },
-  ];
+      {
+        "@type": "WebSite",
+        "@id": `${siteConfig.url}/#website`,
+        url: siteConfig.url,
+        name: siteConfig.siteName,
+        description: siteConfig.shortDescription,
+        inLanguage: siteConfig.language,
+        publisher: {
+          "@id": `${siteConfig.url}/#person`,
+        },
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${siteConfig.url}/#webpage`,
+        url: siteConfig.url,
+        name: siteConfig.title,
+        description: siteConfig.description,
+        isPartOf: {
+          "@id": `${siteConfig.url}/#website`,
+        },
+        about: {
+          "@id": `${siteConfig.url}/#person`,
+        },
+        mainEntity: {
+          "@id": `${siteConfig.url}/#person`,
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${siteConfig.url}${siteConfig.ogImage}`,
+        },
+      },
+    ],
+  };
 
   return (
     <div
@@ -71,6 +101,7 @@ export default function Home() {
         <Education />
         <Projects />
         <Contact />
+        <Footer />
       </main>
     </div>
   );

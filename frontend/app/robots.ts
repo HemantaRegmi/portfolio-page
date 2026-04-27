@@ -1,14 +1,13 @@
 import type { MetadataRoute } from "next";
+import { siteConfig } from "@/utils/site";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://hemantaregmi.com";
-
   return {
     rules: {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
+    sitemap: `${siteConfig.url}/sitemap.xml`,
+    host: siteConfig.url,
   };
 }

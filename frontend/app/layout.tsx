@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-
-const siteUrl = "https://hemantaregmi.com";
-const ogImagePath = "/images/hero-bg.jpg";
-const faviconPath = "/svgs/mountain-nature-snow-svgrepo-com.svg";
+import { identityProfiles, siteConfig } from "@/utils/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,65 +19,65 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  applicationName: "Hemanta Regmi Portfolio",
+  metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.siteName,
   title: {
-    default: "Hemanta Regmi | Full-Stack Software Engineer",
-    template: "%s | Hemanta Regmi",
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
   },
-  description:
-    "Portfolio of Hemanta Regmi, a full-stack software engineer building scalable web applications, cloud infrastructure, and healthcare-focused digital products.",
-  keywords: [
-    "Hemanta Regmi",
-    "Hemanta Regmi portfolio",
-    "full-stack software engineer",
-    "software developer portfolio",
-    "Next.js developer",
-    "React developer",
-    "TypeScript developer",
-    "cloud infrastructure",
-    "healthcare software engineer",
-    "web developer",
-  ],
-  authors: [{ name: "Hemanta Regmi", url: siteUrl }],
-  creator: "Hemanta Regmi",
-  publisher: "Hemanta Regmi",
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  referrer: "origin-when-cross-origin",
   alternates: {
-    canonical: siteUrl,
+    canonical: siteConfig.url,
+    languages: {
+      "en-US": siteConfig.url,
+    },
   },
   icons: {
-    icon: faviconPath,
-    shortcut: faviconPath,
-    apple: faviconPath,
+    icon: [
+      { url: "/icon", type: "image/png", sizes: "512x512" },
+      { url: "/icon", type: "image/png", sizes: "192x192" },
+    ],
+    shortcut: [{ url: "/icon", type: "image/png" }],
+    apple: [{ url: "/apple-icon", type: "image/png", sizes: "180x180" }],
   },
+  manifest: "/manifest.webmanifest",
   category: "technology",
   formatDetection: {
     address: false,
     email: false,
     telephone: false,
   },
+  appleWebApp: {
+    capable: true,
+    title: siteConfig.siteName,
+    statusBarStyle: "default",
+  },
   openGraph: {
     type: "website",
-    url: siteUrl,
-    title: "Hemanta Regmi | Full-Stack Software Engineer",
-    description:
-      "Explore Hemanta Regmi's portfolio featuring full-stack projects, cloud architecture work, and software engineering experience.",
-    siteName: "Hemanta Regmi Portfolio",
+    locale: siteConfig.locale,
+    url: siteConfig.url,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    siteName: siteConfig.siteName,
     images: [
       {
-        url: ogImagePath,
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: "Hemanta Regmi portfolio hero background",
+        alt: `${siteConfig.name} portfolio preview`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hemanta Regmi | Full-Stack Software Engineer",
-    description:
-      "Full-stack software engineer portfolio with projects, experience, and cloud-focused application work.",
-    images: [ogImagePath],
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [siteConfig.twitterImage],
   },
   robots: {
     index: true,
@@ -96,6 +92,11 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  themeColor: "#4DA8DA",
+  colorScheme: "light",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -106,10 +107,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        {children}
-        <Analytics />
-      </body>
+      <head>
+        {identityProfiles.map((profileUrl) => (
+          <link key={profileUrl} rel="me" href={profileUrl} />
+        ))}
+      </head>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

@@ -171,7 +171,7 @@ export default function Experience() {
                           <Calendar className="w-4 h-4 text-sky-500" />
                           {exp.period}
                         </div>
-                        <p>•</p>
+                        <p className="hidden xl:block">•</p>
                         <div className="flex items-center gap-2 px-4 py-2 rounded-full">
                           <MapPin className="w-4 h-4 text-[#4DA8DA]" />
                           {exp.location}

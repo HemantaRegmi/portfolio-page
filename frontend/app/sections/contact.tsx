@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Mail, Github, Linkedin, ArrowRight, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { siteConfig } from "@/utils/site";
 
 export default function Contact() {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
@@ -110,9 +111,10 @@ export default function Contact() {
               onMouseLeave={() => setHoveredLink(null)}
             >
               <a
-                href="https://github.com/HemantaRegmi"
+                href={siteConfig.socials.github.url}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener noreferrer"
+                aria-label="Open GitHub profile"
                 className="relative"
               >
                 <motion.div
@@ -158,9 +160,10 @@ export default function Contact() {
               onMouseLeave={() => setHoveredLink(null)}
             >
               <a
-                href="https://linkedin.com"
+                href={siteConfig.socials.linkedin.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Open LinkedIn profile"
                 className="relative"
               >
                 <motion.div
