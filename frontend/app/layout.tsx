@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { identityProfiles, siteConfig } from "@/utils/site";
 
+const faviconPath = "/svgs/mountain-nature-snow-svgrepo-com.svg";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -38,12 +40,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: "/icon", type: "image/png", sizes: "512x512" },
-      { url: "/icon", type: "image/png", sizes: "192x192" },
-    ],
-    shortcut: [{ url: "/icon", type: "image/png" }],
-    apple: [{ url: "/apple-icon", type: "image/png", sizes: "180x180" }],
+    icon: faviconPath,
+    shortcut: faviconPath,
+    apple: faviconPath,
   },
   manifest: "/manifest.webmanifest",
   category: "technology",
