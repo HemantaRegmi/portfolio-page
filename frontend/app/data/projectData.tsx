@@ -53,30 +53,6 @@ export const projects: Project[] = [
     timeframe: "Dec 2025 - Present",
   },
   {
-    title: "Bloodwork Analysis Tool",
-    description:
-      "Creating a personal app that gives me a rundown of my latest bloodwork that gives me advice on next steps, while having the context of all my other blood records. ",
-    detailedDescription:
-      "Containerized via docker. Created with Typescript frontend and Django backend.",
-    image: "/images/hippa-api-routes.jpg",
-    gradient: "from-red-400 to-rose-500",
-    github: "https://github.com/hemantaregmi",
-    live: null,
-    timeframe: "Dec 2025 - Present",
-  },
-  {
-    title: "Personal LLM News Outlet",
-    description:
-      "Created a news outlet that allows me to keep up with all the latest news regarding the tech industry.",
-    detailedDescription:
-      "Gathered verifiable sources and allowed the LLM to generate the valuable information in regards to my intrests without having to encounter misleading information.",
-    image: "/images/news-outlet.jpg",
-    gradient: "from-red-400 to-rose-500",
-    github: "https://github.com/hemantaregmi",
-    live: null,
-    timeframe: "Nov 2025 - Present",
-  },
-  {
     title: "My Aging In Place Migration",
     description:
       "Migrated My Aging In Place resource site into UT Health Houston infrastructure. Migrated AWS assets and set them up in house.",
