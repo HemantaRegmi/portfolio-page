@@ -56,7 +56,7 @@ export default function Contact() {
               <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] transition-all duration-300">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-2xl bg-linear-to-br  flex items-center justify-center shrink-0">
-                    <Mail className="w-7 h-7 text-[#4DA8DA]" />
+                    <Mail className="w-7 h-7 text-[#0b5f8a]" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="text-xs text-gray-500 uppercase tracking-wider font-extrabold mb-1">
@@ -83,7 +83,7 @@ export default function Contact() {
               <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] transition-all duration-300">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-2xl bg-linear-to-br  flex items-center justify-center shrink-0">
-                    <MapPin className="w-7 h-7 text-[#4DA8DA]" />
+                    <MapPin className="w-7 h-7 text-[#0b5f8a]" />
                   </div>
                   <div>
                     <div className="text-xs text-gray-500 uppercase tracking-wider font-extrabold mb-1">
@@ -217,7 +217,11 @@ export default function Contact() {
             {/* Main form card with light glass effect */}
 
             <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-8 lg:p-10 shadow-[0_16px_48px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] overflow-hidden">
-              <form className="relative z-10 space-y-6" onSubmit={handleSubmit}>
+              <form
+                className="relative z-10 space-y-6"
+                onSubmit={handleSubmit}
+                aria-label="Contact form"
+              >
                 <div>
                   <label
                     htmlFor="name"
@@ -229,8 +233,10 @@ export default function Contact() {
                     type="text"
                     id="name"
                     name="name"
+                    autoComplete="name"
+                    required
                     placeholder="Your name"
-                    className="w-full bg-white/60 border-2 border-gray-200 rounded-xl px-4 py-4 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-[#4DA8DA]/20 focus:border-[#4DA8DA] transition-all shadow-sm font-medium"
+                    className="w-full bg-white/80 border-2 border-gray-300 rounded-xl px-4 py-4 text-gray-800 placeholder-gray-500 focus:ring-4 focus:ring-[#0b5f8a]/20 focus:border-[#0b5f8a] transition-all shadow-sm font-medium"
                   />
                   <ValidationError
                     prefix="Name"
@@ -250,8 +256,10 @@ export default function Contact() {
                     type="email"
                     id="email"
                     name="email"
+                    autoComplete="email"
+                    required
                     placeholder="youremail@example.com"
-                    className="w-full bg-white/60 border-2 border-gray-200 rounded-xl px-4 py-4 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-[#4DA8DA]/20 focus:border-[#4DA8DA] transition-all shadow-sm font-medium"
+                    className="w-full bg-white/80 border-2 border-gray-300 rounded-xl px-4 py-4 text-gray-800 placeholder-gray-500 focus:ring-4 focus:ring-[#0b5f8a]/20 focus:border-[#0b5f8a] transition-all shadow-sm font-medium"
                   />
                   <ValidationError
                     prefix="Email"
@@ -272,7 +280,8 @@ export default function Contact() {
                     rows={4}
                     placeholder="How can I help you?"
                     name="message"
-                    className="w-full bg-white/60 border-2 border-gray-200 rounded-xl px-4 py-4 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-[#4DA8DA]/20 focus:border-[#4DA8DA] transition-all shadow-sm font-medium resize-none"
+                    required
+                    className="w-full bg-white/80 border-2 border-gray-300 rounded-xl px-4 py-4 text-gray-800 placeholder-gray-500 focus:ring-4 focus:ring-[#0b5f8a]/20 focus:border-[#0b5f8a] transition-all shadow-sm font-medium resize-none"
                   />
                 </div>
                 <ValidationError
@@ -281,16 +290,16 @@ export default function Contact() {
                   errors={state.errors}
                 />
                 {state.succeeded && (
-                  <p className="text-blue-600 font-semibold text-center">
+                  <p role="status" className="text-[#0b5f8a] font-semibold text-center">
                     Message sent successfully!
                   </p>
                 )}
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="w-full group bg-[#4DA8DA] hover:bg-[#3B9DD8] text-white font-extrabold text-lg rounded-xl px-4 py-4 flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(77,168,218,0.4)] hover:shadow-[0_12px_32px_rgba(77,168,218,0.5)] transition-all duration-300 cursor-pointer"
+                  className="w-full group bg-[#0b5f8a] hover:bg-[#084b6d] disabled:bg-gray-500 text-white font-extrabold text-lg rounded-xl px-4 py-4 flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(0,0,0,0.25)] transition-all duration-300 cursor-pointer disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {state.submitting ? "Sending…" : "Send Message"}
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </form>

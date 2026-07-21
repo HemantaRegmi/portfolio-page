@@ -14,7 +14,7 @@ export const siteConfig = {
   location: "Houston, TX, United States",
   ogImage: "/opengraph-image",
   twitterImage: "/twitter-image",
-  profileImage: "/images/profile-image.jpeg",
+  profileImage: "/images/profile-image.png",
   socials: {
     github: {
       label: "GitHub",

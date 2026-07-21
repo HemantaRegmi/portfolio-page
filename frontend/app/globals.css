@@ -4,6 +4,32 @@ html {
   scroll-behavior: smooth;
 }
 
+:focus-visible {
+  outline: 3px solid #0b5f8a;
+  outline-offset: 3px;
+}
+
+section[id] {
+  scroll-margin-top: 7rem;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #111827;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 @keyframes hero-float {
   0%,
   100% {
@@ -44,4 +70,19 @@ html {
 
 .hero-bob {
   animation: hero-bob 1.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

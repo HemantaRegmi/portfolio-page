@@ -327,7 +327,10 @@ export default function Skills() {
           <div className="relative flex items-center bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] overflow-hidden p-2">
             <Search className="w-6 h-6 text-[#4DA8DA] ml-4 mr-2" />
             <input
+              id="skill-search"
               type="text"
+              aria-label="Search technical skills"
+              aria-controls="skills-results"
               placeholder="Search skills..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -335,6 +338,8 @@ export default function Skills() {
             />
             {searchTerm && (
               <button
+                type="button"
+                aria-label="Clear skills search"
                 onClick={() => setSearchTerm("")}
                 className="text-sm text-gray-700 hover:text-[#4DA8DA] mr-4 transition-colors font-semibold bg-gray-100/80 px-3 py-1 rounded-full border border-gray-200 shadow-sm cursor-pointer"
               >
@@ -344,8 +349,12 @@ export default function Skills() {
           </div>
         </motion.div>
 
+        <p className="sr-only" role="status">
+          {filteredSkills.length} skill{filteredSkills.length === 1 ? "" : "s"} found
+        </p>
+
         {/* Honeycomb Skills Grid */}
-        <div className="relative min-h-150 flex items-center justify-center">
+        <div id="skills-results" className="relative min-h-150 flex items-center justify-center">
           <AnimatePresence mode="wait">
             {filteredSkills.length === 0 ? (
               <motion.div
@@ -391,6 +400,7 @@ export default function Skills() {
                     <div className="hexagon group">
                       {/* SVG Border */}
                       <svg
+                        aria-hidden="true"
                         className="hexagon-border"
                         viewBox="0 0 100 115"
                         xmlns="http://www.w3.org/2000/svg"

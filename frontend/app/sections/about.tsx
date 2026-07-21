@@ -79,12 +79,12 @@ export default function About() {
                 <div className="relative w-64 h-64 rounded-full p-2 bg-[rgba(255,255,255,0.01)] backdrop-blur-xl border-2 border-[rgba(255,255,255,0.05)] shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
                   <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-[rgba(255,255,255,0.05)] shadow-inner bg-linear-to-br backdrop-blur-sm">
                     <Image
-                      src="/images/profile-image.jpeg"
+                      src="/images/profile-image.png"
                       alt="Portrait of Hemanta Regmi"
                       fill
                       priority
                       sizes="256px"
-                      className="scale-[1.95] object-cover object-center"
+                      className="object-cover object-[50%_15%]"
                     />
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export default function About() {
             <div className="bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-8 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)]">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 I am a{" "}
-                <span className="font-bold text-[#4DA8DA]">
+                <span className="font-bold text-[#0b5f8a]">
                   passionate software engineer
                 </span>{" "}
                 dedicated to designing scalable systems and developing
@@ -103,7 +103,7 @@ export default function About() {
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 I bridge the gap between{" "}
-                <span className="font-bold text-[#4DA8DA]">
+                <span className="font-bold text-[#0b5f8a]">
                   complex technical requirements
                 </span>{" "}
                 and elegant, performant solutions. With a strong foundation in
@@ -143,7 +143,7 @@ export default function About() {
 
                       <div className="relative w-full h-full rounded-xl overflow-hidden bg-white/50 border-2 border-[#4DA8DA]/40">
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <item.icon className="w-7 h-7 text-[#4DA8DA] relative z-10" />
+                          <item.icon className="w-7 h-7 text-[#0b5f8a] relative z-10" />
                         </div>
                       </div>
                     </div>

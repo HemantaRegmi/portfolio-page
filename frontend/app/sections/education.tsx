@@ -52,7 +52,7 @@ export default function Education() {
               </div>
 
               <div className="grow">
-                <h3 className="text-3xl font-extrabold text-gray-800 group-hover:text-[#4DA8DA] transition-colors mb-2">
+                <h3 className="text-3xl font-extrabold text-gray-800 group-hover:text-[#0b5f8a] transition-colors mb-2">
                   Bachelor of Science in Software Engineering
                 </h3>
                 <p className="text-xl font-bold text-gray-600">
@@ -63,12 +63,12 @@ export default function Education() {
 
             <div className="relative z-10 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 text-sm text-gray-700 mb-8 font-bold">
               <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-[#4DA8DA]" />
+                <Calendar className="w-4 h-4 text-[#0b5f8a]" />
                 <span>September 2021 - December 2025</span>
               </div>
               <span className="hidden sm:inline text-gray-400">•</span>
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#4DA8DA]" />
+                <MapPin className="w-4 h-4 text-[#0b5f8a]" />
                 <span>Richardson, TX</span>
               </div>
             </div>

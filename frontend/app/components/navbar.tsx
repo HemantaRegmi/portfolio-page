@@ -16,6 +16,7 @@ const navItems = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isOverHero, setIsOverHero] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,19 @@ export default function Navbar() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const hero = document.querySelector("#home");
+    if (!hero) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsOverHero(entry.isIntersecting),
+      { rootMargin: "-96px 0px 0px 0px", threshold: 0 },
+    );
+
+    observer.observe(hero);
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (
@@ -39,6 +53,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
+      aria-label="Primary navigation"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -46,14 +61,29 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between rounded-full bg-white/25 backdrop-blur-3xl border-2 border-white/40 px-6 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)]">
+        <div
+          className={`flex items-center justify-between rounded-full backdrop-blur-3xl border-2 px-6 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] transition-colors duration-300 ${
+            isOverHero
+              ? "bg-black/25 border-white/30"
+              : "bg-white/25 border-white/40"
+          }`}
+        >
           <div className="flex-shrink-0 flex items-center">
             <a
               href="#home"
               onClick={(e) => scrollToSection(e, "#home")}
-              className="text-gray-800 font-bold text-xl tracking-tighter cursor-pointer"
+              className={`font-bold text-xl tracking-tighter cursor-pointer transition-colors duration-300 ${
+                isOverHero ? "text-white" : "text-gray-800"
+              }`}
             >
-              Hemanta<span className="text-[#4DA8DA]">.Regmi</span>
+              Hemanta
+              <span
+                className={`transition-colors duration-300 ${
+                  isOverHero ? "text-white" : "text-[#0b5f8a]"
+                }`}
+              >
+                .Regmi
+              </span>
             </a>
           </div>
 
@@ -64,7 +94,11 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => scrollToSection(e, item.href)}
-                  className="text-gray-700 hover:text-gray-900 hover:bg-gray-100/50 px-3 py-2 rounded-full text-sm font-medium transition-all cursor-pointer"
+                  className={`px-3 py-2 rounded-full text-sm font-medium transition-all cursor-pointer ${
+                    isOverHero
+                      ? "text-white hover:bg-black/20 hover:text-white"
+                      : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
+                  }`}
                 >
                   {item.name}
                 </a>
@@ -76,7 +110,11 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => scrollToSection(e, "#contact")}
-              className="bg-white/40 hover:bg-white/60 backdrop-blur-2xl text-gray-800 hover:text-[#4DA8DA] px-5 py-2 rounded-full text-sm font-bold transition-all border-2 border-white/50 shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_16px_rgba(77,168,218,0.3)] hover:border-[#4DA8DA]/30 flex items-center gap-2 cursor-pointer"
+              className={`backdrop-blur-2xl px-5 py-2 rounded-full text-sm font-bold transition-all border-2 border-white/50 shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_16px_rgba(77,168,218,0.3)] flex items-center gap-2 cursor-pointer ${
+                isOverHero
+                  ? "bg-black/20 hover:bg-black/30 text-white hover:text-white"
+                  : "bg-white/40 hover:bg-white/60 text-gray-800 hover:text-[#0b5f8a] hover:border-[#0b5f8a]/30"
+              }`}
             >
               Contact Me <span>&rarr;</span>
             </a>
@@ -85,7 +123,14 @@ export default function Navbar() {
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-gray-900 inline-flex items-center justify-center p-2 rounded-md focus:outline-none cursor-pointer"
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              className={`inline-flex min-h-11 min-w-11 items-center justify-center p-2 rounded-md cursor-pointer transition-colors ${
+                isOverHero
+                  ? "text-white hover:text-white"
+                  : "text-gray-700 hover:text-gray-900"
+              }`}
             >
               {isOpen ? (
                 <X className="h-6 w-6" />
@@ -100,17 +145,28 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isOpen && (
         <motion.div
+          id="mobile-navigation"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden mt-2 px-4"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 rounded-2xl bg-white/25 backdrop-blur-3xl border-2 border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)]">
+          <div
+            className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 rounded-2xl backdrop-blur-3xl border-2 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] ${
+              isOverHero
+                ? "bg-black/30 border-white/30"
+                : "bg-white/25 border-white/40"
+            }`}
+          >
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className="text-gray-700 hover:text-gray-900 hover:bg-gray-100/50 block px-3 py-2 rounded-xl text-base font-medium transition-all cursor-pointer"
+                className={`block px-3 py-2 rounded-xl text-base font-medium transition-all cursor-pointer ${
+                  isOverHero
+                    ? "text-white hover:bg-black/20 hover:text-white"
+                    : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
+                }`}
               >
                 {item.name}
               </a>

@@ -77,6 +77,9 @@ export default function Home() {
       className="min-h-screen text-gray-800 selection:bg-[#4DA8DA]/30 selection:text-white"
       style={{ fontFamily: "Inter, sans-serif" }}
     >
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -85,15 +88,15 @@ export default function Home() {
       <div className="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
         <Image
           src="/images/leaves-bg.jpg"
-          alt="Botanical leaves background"
+          alt=""
           fill
           priority
           className="w-full h-full object-cover object-center"
         />
       </div>
 
-      <main>
-        <Navbar />
+      <Navbar />
+      <main id="main-content">
         <Hero />
         <About />
         <Skills />
@@ -101,8 +104,8 @@ export default function Home() {
         <Education />
         <Projects />
         <Contact />
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }

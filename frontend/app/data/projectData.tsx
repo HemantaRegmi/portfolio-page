@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Github, ExternalLink } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 export interface Project {
   title: string;
@@ -122,6 +123,24 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeyDown);
+    closeButtonRef.current?.focus();
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -131,6 +150,9 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
       onClick={onClose}
     >
       <motion.div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-dialog-title"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
@@ -139,7 +161,10 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
       >
         {/* Close button */}
         <button
+          ref={closeButtonRef}
+          type="button"
           onClick={onClose}
+          aria-label="Close project details"
           className="absolute top-6 right-6 w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors z-10"
         >
           <span className="text-2xl text-gray-700">&times;</span>
@@ -148,6 +173,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         <div className="p-8 pt-2">
           {/* Title */}
           <h3
+            id="project-dialog-title"
             className="text-3xl font-extrabold text-gray-800 mb-4 mt-6"
             style={{ fontFamily: "Space Grotesk, sans-serif" }}
           >
@@ -178,7 +204,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#4DA8DA] hover:bg-[#3B9DD8] text-white font-bold rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#0b5f8a] hover:bg-[#084b6d] text-white font-bold rounded-xl transition-colors"
               >
                 <ExternalLink className="w-5 h-5" />
                 Visit Live Site
