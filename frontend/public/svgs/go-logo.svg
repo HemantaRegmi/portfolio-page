@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 48" role="img" aria-labelledby="title">
+  <title id="title">Go programming language</title>
+  <g fill="#00ADD8">
+    <path d="M8 12h31v6H8zM2 22h31v6H2zM8 32h25v6H8z"/>
+    <path d="M58 8c-14 0-24 9-24 21 0 9 7 15 17 15 6 0 11-2 15-5l3-17H53l-1 6h7l-1 6c-2 2-4 3-7 3-6 0-9-3-9-8 0-8 6-14 15-14 4 0 8 1 11 4l5-6c-4-3-9-5-15-5zM95 8c-13 0-23 9-23 21 0 9 7 15 17 15 13 0 23-9 23-21 0-9-7-15-17-15zm-5 29c-6 0-9-3-9-8 0-8 6-14 13-14 6 0 9 3 9 8 0 8-6 14-13 14z"/>
+  </g>
+</svg>

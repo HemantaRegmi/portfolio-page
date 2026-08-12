@@ -22,6 +22,7 @@ const skillIconMap: Record<string, string> = {
   TypeScript: "/svgs/typescript-svgrepo-com.svg",
   Python: "/svgs/python-svgrepo-com (1).svg",
   "C++": "/svgs/c-plus-plus-svgrepo-com.svg",
+  Go: "/svgs/go-logo.svg",
   "Next.js": "/svgs/next-dot-js-svgrepo-com.svg",
   React: "/svgs/react-svgrepo-com.svg",
   Vue: "/svgs/vue.svg",
@@ -65,6 +66,10 @@ const skillsList = [
   },
   {
     name: "C++",
+    category: "Language",
+  },
+  {
+    name: "Go",
     category: "Language",
   },
   {
