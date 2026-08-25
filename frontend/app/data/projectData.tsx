@@ -21,7 +21,7 @@ export const projects: Project[] = [
     description:
       "Built a fully responsive single-page portfolio using React and Tailwind with a glassmorphic design system. Features honeycomb skill layout, timeline components, and smooth animations.",
     detailedDescription:
-      "A modern, visually stunning portfolio website showcasing software engineering projects and skills. Features include custom glassmorphic component design inspired by Frutiger Aero aesthetics, innovative honeycomb/hexagonal skill grid layout, interactive timeline for work experience, smooth scroll animations with Motion (Framer Motion), fully responsive design optimized for all devices, and custom Space Grotesk + Inter dual-font system for optimal readability.",
+      "A modern, visually stunning portfolio website showcasing software engineering projects and skills. Features include custom glassmorphic component design inspired by Frutiger Aero aesthetics, innovative honeycomb/hexagonal skill grid layout, interactive timeline for work experience, smooth scroll animations with Motion (Framer Motion), fully responsive design optimized for all devices, and a custom Space Grotesk + Manrope font system for optimal readability.",
     image: "/images/hero-bg.jpg",
     gradient: "from-rose-400 to-pink-500",
     github: "https://github.com/hemantaregmi",
@@ -175,7 +175,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           <h3
             id="project-dialog-title"
             className="text-3xl font-extrabold text-gray-800 mb-4 mt-6"
-            style={{ fontFamily: "Space Grotesk, sans-serif" }}
+            style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
             {project.title}
           </h3>

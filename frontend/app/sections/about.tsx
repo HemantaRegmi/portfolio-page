@@ -53,7 +53,7 @@ export default function About() {
         >
           <h2
             className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-800"
-            style={{ fontFamily: "Space Grotesk, sans-serif" }}
+            style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
             About Me
           </h2>

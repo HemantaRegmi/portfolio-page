@@ -19,7 +19,7 @@ export default function Education() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-extrabold mb-8"
             style={{
-              fontFamily: "Space Grotesk, sans-serif",
+              fontFamily: "var(--font-space-grotesk), sans-serif",
               color: "#1a202c",
             }}
           >

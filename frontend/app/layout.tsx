@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
+import { Geist_Mono, Manrope, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { identityProfiles, siteConfig } from "@/utils/site";
 
 const faviconPath = "/svgs/mountain-nature-snow-svgrepo-com.svg";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
@@ -104,7 +104,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full antialiased`}
+      className={`${manrope.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <head>
         {identityProfiles.map((profileUrl) => (

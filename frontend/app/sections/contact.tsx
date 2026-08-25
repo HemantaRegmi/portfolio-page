@@ -25,7 +25,7 @@ export default function Contact() {
           <h2
             className="text-4xl md:text-5xl font-extrabold mb-6"
             style={{
-              fontFamily: "Space Grotesk, sans-serif",
+              fontFamily: "var(--font-space-grotesk), sans-serif",
               color: "#1a202c",
             }}
           >

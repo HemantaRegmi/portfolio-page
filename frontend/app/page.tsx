@@ -75,7 +75,6 @@ export default function Home() {
   return (
     <div
       className="min-h-screen text-gray-800 selection:bg-[#4DA8DA]/30 selection:text-white"
-      style={{ fontFamily: "Inter, sans-serif" }}
     >
       <a href="#main-content" className="skip-link">
         Skip to main content

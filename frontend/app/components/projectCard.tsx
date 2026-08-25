@@ -43,7 +43,7 @@ export function ProjectCard({ project, index, onMoreInfo }: ProjectCardProps) {
         {/* Title */}
         <h3
           className="relative z-10 text-2xl font-extrabold text-gray-800 mb-3"
-          style={{ fontFamily: "Space Grotesk, sans-serif" }}
+          style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
         >
           {project.title}
         </h3>

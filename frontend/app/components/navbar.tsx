@@ -60,7 +60,7 @@ export default function Navbar() {
         scrolled ? "py-4" : "py-6"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`flex items-center justify-between rounded-full backdrop-blur-3xl border-2 px-6 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] transition-colors duration-300 ${
             isOverHero
@@ -72,7 +72,7 @@ export default function Navbar() {
             <a
               href="#home"
               onClick={(e) => scrollToSection(e, "#home")}
-              className={`font-bold text-xl tracking-tighter cursor-pointer transition-colors duration-300 ${
+              className={`font-bold text-2xl tracking-tighter cursor-pointer transition-colors duration-300 ${
                 isOverHero ? "text-white" : "text-gray-800"
               }`}
             >
@@ -88,13 +88,13 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-6 lg:ml-10 flex items-baseline space-x-2 lg:space-x-5">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={(e) => scrollToSection(e, item.href)}
-                  className={`px-3 py-2 rounded-full text-sm font-medium transition-all cursor-pointer ${
+                  className={`px-2 lg:px-3 py-2 rounded-full text-base font-semibold transition-all cursor-pointer ${
                     isOverHero
                       ? "text-white hover:bg-black/20 hover:text-white"
                       : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
@@ -110,7 +110,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => scrollToSection(e, "#contact")}
-              className={`backdrop-blur-2xl px-5 py-2 rounded-full text-sm font-bold transition-all border-2 border-white/50 shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_16px_rgba(77,168,218,0.3)] flex items-center gap-2 cursor-pointer ${
+              className={`backdrop-blur-2xl px-4 lg:px-5 py-2 rounded-full text-base font-bold transition-all border-2 border-white/50 shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_16px_rgba(77,168,218,0.3)] flex items-center gap-2 cursor-pointer ${
                 isOverHero
                   ? "bg-black/20 hover:bg-black/30 text-white hover:text-white"
                   : "bg-white/40 hover:bg-white/60 text-gray-800 hover:text-[#0b5f8a] hover:border-[#0b5f8a]/30"
@@ -162,7 +162,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className={`block px-3 py-2 rounded-xl text-base font-medium transition-all cursor-pointer ${
+                className={`block px-3 py-3 rounded-xl text-lg font-semibold transition-all cursor-pointer ${
                   isOverHero
                     ? "text-white hover:bg-black/20 hover:text-white"
                     : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"

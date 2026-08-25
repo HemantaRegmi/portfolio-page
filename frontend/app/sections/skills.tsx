@@ -154,6 +154,11 @@ const skillsList = [
     category: "Cloud/DevOps",
   },
   {
+    name: "Azure Pipelines",
+    category: "Cloud/DevOps",
+    icon: <Workflow className="w-8 h-8 text-[#0078D4]" />,
+  },
+  {
     name: "Supabase",
     category: "Cloud/DevOps",
     icon: <Database className="w-8 h-8 text-emerald-600" />,
@@ -307,7 +312,7 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800"
-            style={{ fontFamily: "Space Grotesk, sans-serif" }}
+            style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
             Technical Arsenal
           </motion.h2>
