@@ -154,6 +154,11 @@ const skillsList = [
     category: "Cloud/DevOps",
   },
   {
+    name: "Azure DevOps",
+    category: "Cloud/DevOps",
+    icon: <Boxes className="w-8 h-8 text-[#0078D4]" />,
+  },
+  {
     name: "Azure Pipelines",
     category: "Cloud/DevOps",
     icon: <Workflow className="w-8 h-8 text-[#0078D4]" />,
