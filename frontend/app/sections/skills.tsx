@@ -15,6 +15,7 @@ import {
   Bot,
   Boxes,
   Github,
+  Terminal,
 } from "lucide-react";
 
 const skillIconMap: Record<string, string> = {
@@ -71,6 +72,11 @@ const skillsList = [
   {
     name: "Go",
     category: "Language",
+  },
+  {
+    name: "Bash",
+    category: "Language",
+    icon: <Terminal className="w-8 h-8 text-gray-800" />,
   },
   {
     name: "Java",
