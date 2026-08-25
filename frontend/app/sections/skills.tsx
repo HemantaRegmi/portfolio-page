@@ -12,10 +12,10 @@ import {
   BrainCircuit,
   Workflow,
   Cloud,
-  Bot,
   Boxes,
   Github,
   Terminal,
+  AudioLines,
 } from "lucide-react";
 
 const skillIconMap: Record<string, string> = {
@@ -49,6 +49,10 @@ const skillIconMap: Record<string, string> = {
   Hadoop: "/svgs/hadoop-logo.svg",
   Git: "/svgs/git-svgrepo-com.svg",
   Jest: "/svgs/jest-svgrepo-com.svg",
+  Claude: "/svgs/claude.svg",
+  Codex: "/svgs/openai.svg",
+  "OpenAI API": "/svgs/openai.svg",
+  "AI Agents": "/svgs/openai.svg",
 };
 
 const skillsList = [
@@ -213,7 +217,23 @@ const skillsList = [
   {
     name: "OpenAI API",
     category: "AI",
-    icon: <Bot className="w-8 h-8 text-emerald-700" />,
+  },
+  {
+    name: "Codex",
+    category: "AI",
+  },
+  {
+    name: "Claude",
+    category: "AI",
+  },
+  {
+    name: "AI Agents",
+    category: "AI",
+  },
+  {
+    name: "Voice Agents",
+    category: "AI",
+    icon: <AudioLines className="w-8 h-8 text-sky-700" />,
   },
   {
     name: "RAG Pipelines",
@@ -262,7 +282,13 @@ export default function Skills() {
           alt={`${skill.name} icon`}
           width={32}
           height={32}
-          className="w-8 h-8 object-contain"
+          className={`w-8 h-8 object-contain ${
+            skill.name === "AI Agents" ||
+            skill.name === "OpenAI API" ||
+            skill.name === "Codex"
+              ? "brightness-0"
+              : ""
+          }`}
           loading="lazy"
           unoptimized
         />
