@@ -27,7 +27,43 @@ export default function Education() {
           </motion.h2>
         </div>
 
-        {/* Education Card */}
+        {/* Georgia Tech */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto mb-8 relative group"
+        >
+          <div className="absolute -inset-1 bg-linear-to-br rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
+
+          <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] transition-all duration-300 overflow-hidden">
+            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-6 mb-6">
+              <div
+                aria-hidden="true"
+                className="w-20 h-20 shrink-0 flex items-center justify-center rounded-2xl bg-[#003057] text-[#B3A369] text-3xl font-extrabold"
+              >
+                GT
+              </div>
+
+              <div className="grow">
+                <h3 className="text-3xl font-extrabold text-gray-800 group-hover:text-[#0b5f8a] transition-colors mb-2">
+                  Master of Science in Computer Science
+                </h3>
+                <p className="text-xl font-bold text-gray-600">
+                  Georgia Institute of Technology
+                </p>
+              </div>
+            </div>
+
+            <div className="relative z-10 flex items-center gap-2 text-sm text-gray-700 font-bold">
+              <Calendar className="w-4 h-4 text-[#0b5f8a]" />
+              <span>Spring 2027 - Present</span>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* UT Dallas */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
