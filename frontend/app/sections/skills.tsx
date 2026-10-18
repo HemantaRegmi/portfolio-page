@@ -374,7 +374,8 @@ export default function Skills() {
         >
           <div className="absolute inset-0 bg-linear-to-r from-[#3B9DD8] to-[#4DA8DA] rounded-full blur-xl group-hover:blur-2xl transition-all duration-300 opacity-20" />
           <GlassSurface
-            className="items-center rounded-full p-2 focus-within:ring-2 focus-within:ring-[#0b5f8a]/40"
+            data-focus-surface
+            className="items-center p-2"
             style={{ display: "flex", borderRadius: "9999px" }}
           >
             <Search className="w-6 h-6 text-[#4DA8DA] ml-4 mr-2" />

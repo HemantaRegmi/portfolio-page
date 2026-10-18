@@ -16,7 +16,7 @@ export default function Footer() {
               target="_blank"
               rel="me noopener noreferrer"
               aria-label={`${profileUrl.includes("github.com") ? "GitHub" : "LinkedIn"} profile (opens in a new tab)`}
-              className="text-[#164967] underline underline-offset-4 hover:text-[#0b5f8a] transition-colors"
+              className="inline-block rounded-md text-[#164967] underline underline-offset-4 hover:text-[#0b5f8a] transition-colors"
             >
               {profileUrl.includes("github.com") ? "GitHub Profile" : "LinkedIn"}
             </a>

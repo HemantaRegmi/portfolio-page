@@ -202,7 +202,7 @@ export default function Experience() {
                         onClick={() => toggleCard(exp.id)}
                         aria-expanded={isOpen}
                         aria-controls={`experience-details-${exp.id}`}
-                        className="flex items-center gap-2 text-slate-700 font-extrabold cursor-pointer"
+                        className="flex items-center gap-2 rounded-lg text-slate-700 font-extrabold cursor-pointer"
                       >
                         <ChevronDown
                           className={`h-4 w-4 transition-transform duration-300 ${

@@ -50,7 +50,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="relative group cursor-pointer"
+              className="relative block rounded-3xl group cursor-pointer"
             >
               <div className="absolute -inset-1 bg-linear-to-br  rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
 
@@ -111,18 +111,16 @@ export default function Contact() {
               onMouseEnter={() => setHoveredLink("github")}
               onMouseLeave={() => setHoveredLink(null)}
             >
-              <a
+              <motion.a
                 href={siteConfig.socials.github.url}
                 target="_blank"
                 rel="me noopener noreferrer"
                 aria-label="Open GitHub profile"
-                className="relative"
+                className="relative block size-20 rounded-full"
+                whileHover={{ scale: 1.15, y: -8 }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
               >
-                <motion.div
-                  whileHover={{ scale: 1.15, y: -8 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                  className="relative w-20 h-20 cursor-pointer"
-                >
+                <div className="relative w-20 h-20 cursor-pointer">
                   {/* Outer glow effect on hover */}
                   <div className="absolute -inset-2 bg-linear-to-br from-slate-600/40 to-slate-800/40 rounded-full opacity-0 hover:opacity-100 blur-xl transition duration-500"></div>
 
@@ -133,8 +131,8 @@ export default function Contact() {
 
                     <Github className="w-9 h-9 text-slate-800 relative z-10 drop-shadow-sm" />
                   </div>
-                </motion.div>
-              </a>
+                </div>
+              </motion.a>
 
               {/* Hover text label */}
               <motion.div
@@ -160,18 +158,16 @@ export default function Contact() {
               onMouseEnter={() => setHoveredLink("linkedin")}
               onMouseLeave={() => setHoveredLink(null)}
             >
-              <a
+              <motion.a
                 href={siteConfig.socials.linkedin.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open LinkedIn profile"
-                className="relative"
+                className="relative block size-20 rounded-full"
+                whileHover={{ scale: 1.15, y: -8 }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
               >
-                <motion.div
-                  whileHover={{ scale: 1.15, y: -8 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                  className="relative w-20 h-20 cursor-pointer"
-                >
+                <div className="relative w-20 h-20 cursor-pointer">
                   {/* Outer glow effect on hover */}
                   <div className="absolute -inset-2 bg-linear-to-br from-blue-500/40 to-blue-700/40 rounded-full opacity-0 hover:opacity-100 blur-xl transition duration-500"></div>
 
@@ -182,8 +178,8 @@ export default function Contact() {
 
                     <Linkedin className="w-9 h-9 text-blue-600 relative z-10 drop-shadow-sm" />
                   </div>
-                </motion.div>
-              </a>
+                </div>
+              </motion.a>
 
               {/* Hover text label */}
               <motion.div

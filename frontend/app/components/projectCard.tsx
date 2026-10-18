@@ -72,7 +72,7 @@ export function ProjectCard({ project, index, onMoreInfo }: ProjectCardProps) {
             <button
               onClick={onMoreInfo}
               aria-label={`More information about ${project.title}`}
-              className="inline-flex min-h-11 min-w-11 items-center justify-center text-gray-800 font-bold hover:text-[#0b5f8a] transition-all duration-300 cursor-pointer"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-gray-800 font-bold hover:text-[#0b5f8a] transition-all duration-300 cursor-pointer"
               onMouseEnter={() => setShowTooltip("info")}
               onMouseLeave={() => setShowTooltip(null)}
             >
@@ -98,7 +98,7 @@ export function ProjectCard({ project, index, onMoreInfo }: ProjectCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`View ${project.title} source code on GitHub (opens in a new tab)`}
-                className="inline-flex min-h-11 min-w-11 items-center justify-center text-gray-800 font-bold hover:text-[#0b5f8a] transition-all duration-300 cursor-pointer"
+                className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-gray-800 font-bold hover:text-[#0b5f8a] transition-all duration-300 cursor-pointer"
                 onMouseEnter={() => setShowTooltip("github")}
                 onMouseLeave={() => setShowTooltip(null)}
               >
@@ -125,7 +125,7 @@ export function ProjectCard({ project, index, onMoreInfo }: ProjectCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Visit the ${project.title} live site (opens in a new tab)`}
-                className="inline-flex min-h-11 min-w-11 items-center justify-center text-gray-800 font-bold hover:text-[#0b5f8a] transition-all duration-300 cursor-pointer"
+                className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-gray-800 font-bold hover:text-[#0b5f8a] transition-all duration-300 cursor-pointer"
                 onMouseEnter={() => setShowTooltip("live")}
                 onMouseLeave={() => setShowTooltip(null)}
               >

@@ -71,7 +71,7 @@ export default function Navbar() {
             <a
               href="#home"
               onClick={(e) => scrollToSection(e, "#home")}
-              className={`font-bold text-2xl tracking-tighter cursor-pointer transition-colors duration-300 ${
+              className={`inline-block rounded-lg font-bold text-2xl tracking-tighter cursor-pointer transition-colors duration-300 ${
                 isOverHero ? "text-white" : "text-gray-800"
               }`}
             >
@@ -93,7 +93,7 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => scrollToSection(e, item.href)}
-                  className={`px-2 lg:px-3 py-2 rounded-full text-base font-semibold transition-all cursor-pointer ${
+                  className={`inline-flex px-2 lg:px-3 py-2 rounded-full text-base font-semibold transition-all cursor-pointer ${
                     isOverHero
                       ? "text-white hover:bg-black/20 hover:text-white"
                       : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
