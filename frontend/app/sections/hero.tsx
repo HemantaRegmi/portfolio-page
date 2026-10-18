@@ -32,11 +32,9 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
         <h1 className="mb-8 max-w-5xl px-4 text-4xl leading-tight font-extrabold tracking-tight text-white/95 drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)] md:text-6xl lg:text-7xl [font-family:var(--font-space-grotesk)]">
-          Passionate About Delivering{" "}
-          <span className="text-[#a8ddf5]">
-            Solutions
-          </span>{" "}
-          End-to-End
+          Building Reliable{" "}
+          <span className="text-[#a8ddf5]">Systems</span> &amp; Cloud
+          Infrastructure
         </h1>
 
         <div className="mb-12 px-4">
