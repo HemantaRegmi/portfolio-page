@@ -37,7 +37,7 @@ export default function Hero() {
           Infrastructure
         </h1>
 
-        <div className="mb-12 px-4">
+        <div className="px-4">
           <ul className="flex flex-wrap items-center justify-center gap-3 text-sm font-bold text-white/85 md:gap-4 md:text-base">
             {tags.map((tag) => (
               <li key={tag} className="flex items-center gap-3 md:gap-4">
@@ -49,27 +49,7 @@ export default function Hero() {
             ))}
           </ul>
         </div>
-
-        <a
-          href="#projects"
-          className="inline-flex items-center justify-center rounded-full bg-[#0b5f8a] px-8 py-4 text-lg font-extrabold text-white shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-300 hover:scale-105 hover:bg-[#084b6d]"
-        >
-          View My Work
-        </a>
       </div>
-
-      <a
-        href="#about"
-        aria-label="Scroll to about section"
-        className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-white/75 transition-colors hover:text-[#4DA8DA]"
-      >
-        <span className="rounded-full border border-white/10 bg-white/2 px-3 py-1.5 text-sm font-bold tracking-widest uppercase shadow-[0_4px_12px_rgba(0,0,0,0.3)] backdrop-blur-lg">
-          Scroll
-        </span>
-        <span className="hero-bob rounded-full border border-white/10 bg-white/2 p-2.5 text-lg leading-none shadow-[0_4px_12px_rgba(0,0,0,0.3)] backdrop-blur-lg">
-          ↓
-        </span>
-      </a>
     </section>
   );
 }
