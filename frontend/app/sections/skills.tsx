@@ -336,7 +336,29 @@ export default function Skills() {
       row += 1;
     }
 
-    return positioned;
+    // Integer lattice coordinates let neighboring tiles share one outline.
+    const drawnEdges = new Set<string>();
+    const vertices = [
+      [1, 0], [2, 1], [2, 3], [1, 4], [0, 3], [0, 1],
+    ];
+
+    return positioned.map((cell) => {
+      const x = cell.col * 2 + Number(cell.offset);
+      const y = cell.row * 3;
+      const borderPath = vertices.map(([startX, startY], index) => {
+        const [endX, endY] = vertices[(index + 1) % vertices.length];
+        const edge = [
+          `${x + startX},${y + startY}`,
+          `${x + endX},${y + endY}`,
+        ].sort().join("|");
+
+        if (drawnEdges.has(edge)) return "";
+        drawnEdges.add(edge);
+        return `M${startX * 50} ${startY * 28.75}L${endX * 50} ${endY * 28.75}`;
+      }).join(" ");
+
+      return { ...cell, borderPath };
+    });
   }, [filteredSkills]);
 
   return (
@@ -414,7 +436,7 @@ export default function Skills() {
                 key="honeycomb-grid"
                 className="honeycomb-container"
               >
-                {positionedSkills.map(({ skill, row, col, offset }) => (
+                {positionedSkills.map(({ skill, row, col, offset, borderPath }) => (
                   <div
                     key={skill.name}
                     className="hexagon-wrapper"
@@ -424,23 +446,23 @@ export default function Skills() {
                       gridColumnEnd: "span 2",
                     }}
                   >
-                    <div className="hexagon group">
-                      {/* SVG Border */}
-                      <svg
-                        aria-hidden="true"
-                        className="hexagon-border"
-                        viewBox="0 0 100 115"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <polygon
-                          points="50 0, 100 28.75, 100 86.25, 50 115, 0 86.25, 0 28.75"
-                          fill="none"
-                          stroke="rgba(77, 168, 218, 0.5)"
-                          strokeWidth="7"
-                          className="hexagon-stroke"
-                        />
-                      </svg>
+                    {/* Keep the outline outside the clipped fill so its stroke stays whole. */}
+                    <svg
+                      aria-hidden="true"
+                      className="hexagon-border"
+                      viewBox="0 0 100 115"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d={borderPath}
+                        fill="none"
+                        stroke="#9fcfe7"
+                        strokeWidth="3"
+                        className="hexagon-stroke"
+                      />
+                    </svg>
 
+                    <div className="hexagon group">
                       {/* Outer glow */}
                       <div className="hexagon-glow"></div>
 
@@ -504,6 +526,7 @@ export default function Skills() {
           width: 100%;
           height: 100%;
           pointer-events: none;
+          overflow: visible;
           z-index: 2;
         }
 
@@ -512,10 +535,6 @@ export default function Skills() {
           stroke-linejoin: round;
           stroke-linecap: round;
           vector-effect: non-scaling-stroke;
-        }
-
-        .hexagon:hover .hexagon-stroke {
-          stroke: rgba(77, 168, 218, 0.7);
         }
 
         .hexagon-glow {
@@ -535,7 +554,6 @@ export default function Skills() {
 
         .hexagon:hover {
           background: rgba(255, 255, 255, 0.4);
-          transform: translateY(-6px);
           box-shadow: 0 16px 40px rgba(77, 168, 218, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
 
