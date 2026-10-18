@@ -34,6 +34,7 @@ export default function Education() {
                 <Image
                   src="/images/georgia-tech-logo.svg"
                   alt="Georgia Tech interlocking GT logo"
+                  sizes="80px"
                   className="w-full h-full object-contain"
                   fill
                 />
@@ -71,6 +72,7 @@ export default function Education() {
                 <Image
                   src="/images/utd-logo.png"
                   alt="UT Dallas Logo"
+                  sizes="80px"
                   className="w-full h-full object-contain rounded-2xl"
                   fill
                 />

@@ -34,6 +34,7 @@ export function ProjectCard({ project, onMoreInfo }: ProjectCardProps) {
               src={project.image}
               alt={project.title}
               fill
+              sizes="(min-width: 1280px) 384px, (min-width: 1024px) calc((100vw - 128px) / 3), (min-width: 768px) calc((100vw - 80px) / 2), (min-width: 640px) calc(100vw - 48px), calc(100vw - 32px)"
               className="w-full h-full object-cover"
             />
           </div>

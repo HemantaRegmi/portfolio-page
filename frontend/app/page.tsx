@@ -89,7 +89,8 @@ export default function Home() {
           src="/images/leaves-bg.jpg"
           alt=""
           fill
-          priority
+          sizes="100vw"
+          fetchPriority="low"
           className="w-full h-full object-cover object-center"
         />
       </div>

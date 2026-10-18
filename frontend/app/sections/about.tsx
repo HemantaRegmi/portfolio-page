@@ -72,7 +72,6 @@ export default function About() {
                       src="/images/profile-image.png"
                       alt="Portrait of Hemanta Regmi"
                       fill
-                      priority
                       sizes="256px"
                       className="object-cover object-[50%_15%]"
                     />
