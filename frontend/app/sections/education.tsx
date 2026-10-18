@@ -41,8 +41,8 @@ export default function Education() {
             <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-6 mb-6">
               <div className="relative w-20 h-20 shrink-0">
                 <Image
-                  src="/images/georgia-tech-logo.png"
-                  alt="Georgia Tech Logo"
+                  src="/images/georgia-tech-logo.svg"
+                  alt="Georgia Tech interlocking GT logo"
                   className="w-full h-full object-contain"
                   fill
                 />
