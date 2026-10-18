@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
 import {
   Briefcase,
   Calendar,
@@ -202,23 +201,19 @@ export default function Experience() {
                         <span>{isOpen ? "Hide Details" : "Show Details"}</span>
                       </button>
 
-                      <AnimatePresence initial={false}>
+
                         {isOpen && (
-                          <motion.div
+                          <div
                             id={`experience-details-${exp.id}`}
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.28, ease: "easeOut" }}
                             className="overflow-hidden"
                           >
                             <div className="my-6 h-px bg-slate-300/60" />
                             <p className="text-slate-700 leading-relaxed text-sm md:text-base">
                               {exp.moreInfo}
                             </p>
-                          </motion.div>
+                          </div>
                         )}
-                      </AnimatePresence>
+
                     </GlassSurface>
                   </div>
 

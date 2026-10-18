@@ -1,11 +1,9 @@
-"use client";
-
 import Image from "next/image";
-import { HandshakeIcon } from "@phosphor-icons/react/dist/csr/Handshake";
-import { ChatsCircleIcon } from "@phosphor-icons/react/dist/csr/ChatsCircle";
-import { ArrowsClockwiseIcon } from "@phosphor-icons/react/dist/csr/ArrowsClockwise";
-import { TargetIcon } from "@phosphor-icons/react/dist/csr/Target";
-import { MagnifyingGlassPlusIcon } from "@phosphor-icons/react/dist/csr/MagnifyingGlassPlus";
+import { HandshakeIcon } from "@phosphor-icons/react/dist/ssr/Handshake";
+import { ChatsCircleIcon } from "@phosphor-icons/react/dist/ssr/ChatsCircle";
+import { ArrowsClockwiseIcon } from "@phosphor-icons/react/dist/ssr/ArrowsClockwise";
+import { TargetIcon } from "@phosphor-icons/react/dist/ssr/Target";
+import { MagnifyingGlassPlusIcon } from "@phosphor-icons/react/dist/ssr/MagnifyingGlassPlus";
 import { GlassSurface } from "@/components/glassSurface";
 
 const softSkills = [

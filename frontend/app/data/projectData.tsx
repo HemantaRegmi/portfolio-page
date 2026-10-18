@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import { Github, ExternalLink } from "lucide-react";
 import { useEffect, useRef } from "react";
 
@@ -142,20 +141,14 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
   }, [onClose]);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    <div
       className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
       onClick={onClose}
     >
-      <motion.div
+      <div
         role="dialog"
         aria-modal="true"
         aria-labelledby="project-dialog-title"
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
         className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
@@ -212,7 +205,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             )}
           </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }

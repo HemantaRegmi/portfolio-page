@@ -3,7 +3,6 @@
 import { GlassSurface } from "@/components/glassSurface";
 
 import { useState, useMemo, type ReactNode } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import {
   Search,
@@ -399,41 +398,25 @@ export default function Skills() {
 
         {/* Honeycomb Skills Grid */}
         <div id="skills-results" className="relative min-h-150 flex items-center justify-center">
-          <AnimatePresence initial={false} mode="wait">
+
             {filteredSkills.length === 0 ? (
-              <motion.div
+              <div
                 key="no-results"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
                 className="glass-surface flex flex-col items-center justify-center text-gray-600 py-20 px-12"
               >
                 <Search className="w-12 h-12 mb-4 opacity-40 text-[#4DA8DA]" />
                 <p className="text-xl font-medium">
                   No skills found matching &quot;{searchTerm}&quot;
                 </p>
-              </motion.div>
+              </div>
             ) : (
-              <motion.div
+              <div
                 key="honeycomb-grid"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
                 className="honeycomb-container"
               >
-                {positionedSkills.map(({ skill, row, col, offset }, index) => (
-                  <motion.div
+                {positionedSkills.map(({ skill, row, col, offset }) => (
+                  <div
                     key={skill.name}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0 }}
-                    transition={{
-                      duration: 0.4,
-                      delay: index * 0.03,
-                      type: "spring",
-                      stiffness: 200,
-                      damping: 15,
-                    }}
                     className="hexagon-wrapper"
                     style={{
                       gridRowStart: row + 1,
@@ -471,11 +454,11 @@ export default function Skills() {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
+
         </div>
       </div>
 
@@ -506,11 +489,10 @@ export default function Skills() {
           height: 100%;
           position: relative;
           clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-          background: rgba(255, 255, 255, 0.25);
-          backdrop-filter: blur(20px);
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(229, 244, 250, 0.5));
+          transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
           cursor: default;
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12),
                       inset 0 1px 0 rgba(255, 255, 255, 0.5),
                       0 4px 16px rgba(77, 168, 218, 0.1);
         }

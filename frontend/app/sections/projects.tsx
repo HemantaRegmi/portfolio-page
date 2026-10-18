@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { type Project, ProjectModal, projects } from "@/data/projectData";
 import { ProjectCard } from "@/components/projectCard";
@@ -50,14 +49,14 @@ export function Projects() {
       </div>
 
       {/* Modal */}
-      <AnimatePresence>
+
         {selectedProject && (
           <ProjectModal
             project={selectedProject}
             onClose={() => setSelectedProject(null)}
           />
         )}
-      </AnimatePresence>
+
     </section>
   );
 }

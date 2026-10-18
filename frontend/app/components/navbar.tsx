@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { GlassSurface } from "@/components/glassSurface";
@@ -23,7 +22,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -53,10 +52,8 @@ export default function Navbar() {
   };
 
   return (
-    <motion.nav
+    <nav
       aria-label="Primary navigation"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-[padding] duration-450 ease-in-out ${
         scrolled ? "py-4" : "py-6"
       }`}
@@ -141,10 +138,8 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <motion.div
+        <div
           id="mobile-navigation"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
           className="md:hidden mt-2 px-4"
         >
           <GlassSurface
@@ -167,8 +162,8 @@ export default function Navbar() {
               </a>
             ))}
           </GlassSurface>
-        </motion.div>
+        </div>
       )}
-    </motion.nav>
+    </nav>
   );
 }

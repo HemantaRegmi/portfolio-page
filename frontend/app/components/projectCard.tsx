@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import { Github, ExternalLink, Info, Calendar } from "lucide-react";
 import { useState } from "react";
 import type { Project } from "@/data/projectData";
@@ -74,15 +73,11 @@ export function ProjectCard({ project, onMoreInfo }: ProjectCardProps) {
               <Info className="w-6 h-6" />
             </button>
             {showTooltip === "info" && (
-              <motion.div
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 5 }}
-                transition={{ duration: 0.2 }}
+              <div
                 className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-3 rounded-lg whitespace-nowrap"
               >
                 More Info
-              </motion.div>
+              </div>
             )}
           </div>
 
@@ -100,15 +95,11 @@ export function ProjectCard({ project, onMoreInfo }: ProjectCardProps) {
                 <Github className="w-6 h-6" />
               </a>
               {showTooltip === "github" && (
-                <motion.div
-                  initial={{ opacity: 0, y: 5 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 5 }}
-                  transition={{ duration: 0.2 }}
+                <div
                   className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-3 rounded-lg whitespace-nowrap"
                 >
                   View Code
-                </motion.div>
+                </div>
               )}
             </div>
           )}
@@ -127,15 +118,11 @@ export function ProjectCard({ project, onMoreInfo }: ProjectCardProps) {
                 <ExternalLink className="w-6 h-6" />
               </a>
               {showTooltip === "live" && (
-                <motion.div
-                  initial={{ opacity: 0, y: 5 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 5 }}
-                  transition={{ duration: 0.2 }}
+                <div
                   className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-3 rounded-lg whitespace-nowrap"
                 >
                   Live Site
-                </motion.div>
+                </div>
               )}
             </div>
           )}

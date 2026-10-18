@@ -1,5 +1,3 @@
-"use client";
-
 import { Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 import { GlassSurface } from "@/components/glassSurface";

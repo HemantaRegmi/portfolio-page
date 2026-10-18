@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import { Mail, Github, Linkedin, ArrowRight, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
@@ -96,14 +95,12 @@ export default function Contact() {
               onMouseEnter={() => setHoveredLink("github")}
               onMouseLeave={() => setHoveredLink(null)}
             >
-              <motion.a
+              <a
                 href={siteConfig.socials.github.url}
                 target="_blank"
                 rel="me noopener noreferrer"
                 aria-label="Open GitHub profile"
-                className="relative block size-20 rounded-full"
-                whileHover={{ scale: 1.15, y: -8 }}
-                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className="relative block size-20 rounded-full transition-transform duration-200 hover:-translate-y-2 hover:scale-110"
               >
                 <div className="relative w-20 h-20 cursor-pointer">
                   {/* Outer glow effect on hover */}
@@ -117,16 +114,12 @@ export default function Contact() {
                     <Github className="w-9 h-9 text-slate-800 relative z-10 drop-shadow-sm" />
                   </div>
                 </div>
-              </motion.a>
+              </a>
 
               {/* Hover text label */}
-              <motion.div
-                initial={{ opacity: 0, y: 5 }}
-                animate={{
-                  opacity: hoveredLink === "github" ? 1 : 0,
-                  y: hoveredLink === "github" ? 0 : 5,
-                }}
-                transition={{ duration: 0.2 }}
+              <div
+                hidden={hoveredLink !== "github"}
+                aria-hidden="true"
                 className="absolute -bottom-8 left-1/2 -translate-x-1/2 pointer-events-none whitespace-nowrap"
               >
                 <div className="bg-white/40 backdrop-blur-2xl border-2 border-white/60 rounded-full px-4 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.95)]">
@@ -134,7 +127,7 @@ export default function Contact() {
                     GitHub
                   </span>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* LinkedIn Bubble */}
@@ -143,14 +136,12 @@ export default function Contact() {
               onMouseEnter={() => setHoveredLink("linkedin")}
               onMouseLeave={() => setHoveredLink(null)}
             >
-              <motion.a
+              <a
                 href={siteConfig.socials.linkedin.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open LinkedIn profile"
-                className="relative block size-20 rounded-full"
-                whileHover={{ scale: 1.15, y: -8 }}
-                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className="relative block size-20 rounded-full transition-transform duration-200 hover:-translate-y-2 hover:scale-110"
               >
                 <div className="relative w-20 h-20 cursor-pointer">
                   {/* Outer glow effect on hover */}
@@ -164,16 +155,12 @@ export default function Contact() {
                     <Linkedin className="w-9 h-9 text-blue-600 relative z-10 drop-shadow-sm" />
                   </div>
                 </div>
-              </motion.a>
+              </a>
 
               {/* Hover text label */}
-              <motion.div
-                initial={{ opacity: 0, y: 5 }}
-                animate={{
-                  opacity: hoveredLink === "linkedin" ? 1 : 0,
-                  y: hoveredLink === "linkedin" ? 0 : 5,
-                }}
-                transition={{ duration: 0.2 }}
+              <div
+                hidden={hoveredLink !== "linkedin"}
+                aria-hidden="true"
                 className="absolute -bottom-8 left-1/2 -translate-x-1/2 pointer-events-none whitespace-nowrap"
               >
                 <div className="bg-white/40 backdrop-blur-2xl border-2 border-white/60 rounded-full px-4 py-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.95)]">
@@ -181,7 +168,7 @@ export default function Contact() {
                     LinkedIn
                   </span>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
 
