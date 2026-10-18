@@ -31,13 +31,14 @@ export function GlassSurface({
   interactive = false,
   ...props
 }: GlassSurfaceProps) {
+  // Keep the library from adopting a square radius from the first child.
   return (
     <Glass
       {...props}
       optics={surfaceOptics}
       data-tone={tone}
       className={`glass-surface ${interactive ? "glass-surface-interactive" : ""} ${className}`}
-      style={{ display: "block", ...style }}
+      style={{ display: "block", borderRadius: "1.5rem", ...style }}
     >
       {children}
     </Glass>

@@ -64,8 +64,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <GlassSurface
           tone={isOverHero ? "dark" : "light"}
-          className="items-center justify-between rounded-full px-6 py-3 transition-colors duration-300"
-          style={{ display: "flex" }}
+          className="items-center justify-between px-6 py-3 transition-colors duration-300"
+          style={{ display: "flex", borderRadius: "9999px" }}
         >
           <div className="flex-shrink-0 flex items-center">
             <a
@@ -151,7 +151,8 @@ export default function Navbar() {
         >
           <GlassSurface
             tone={isOverHero ? "dark" : "light"}
-            className="px-2 pt-2 pb-3 space-y-1 sm:px-3 rounded-2xl"
+            className="px-2 pt-2 pb-3 space-y-1 sm:px-3"
+            style={{ borderRadius: "1rem" }}
           >
             {navItems.map((item) => (
               <a
