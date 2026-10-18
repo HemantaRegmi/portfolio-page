@@ -2,35 +2,39 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import { Users, Lightbulb, MessageSquare, Target, Eye } from "lucide-react";
+import { HandshakeIcon } from "@phosphor-icons/react/dist/csr/Handshake";
+import { ChatsCircleIcon } from "@phosphor-icons/react/dist/csr/ChatsCircle";
+import { ArrowsClockwiseIcon } from "@phosphor-icons/react/dist/csr/ArrowsClockwise";
+import { TargetIcon } from "@phosphor-icons/react/dist/csr/Target";
+import { MagnifyingGlassPlusIcon } from "@phosphor-icons/react/dist/csr/MagnifyingGlassPlus";
 
 const softSkills = [
   {
-    icon: Users,
+    icon: HandshakeIcon,
     title: "Collaborative",
     description:
       "Listening to ideas while also presenting them is an engaging experience I love. Especially with no ego involved in my programming procedure!",
   },
   {
-    icon: MessageSquare,
+    icon: ChatsCircleIcon,
     title: "Clear Communication",
     description:
       "Collaborating and establishing clear communication with people towards a shared end goal is something I value, since it allows for better quality discussions amongst technical and non-technical groups. Leading to a more positive project experience.",
   },
   {
-    icon: Lightbulb,
+    icon: ArrowsClockwiseIcon,
     title: "Adaptable",
     description:
       "Throughout my journey, I have realized that learning new technologies will be something I will encounter throughout my whole career. Navigating this portion by being adaptable to learning new tech is something I always enjoy!",
   },
   {
-    icon: Target,
+    icon: TargetIcon,
     title: "Humble and Goal-Oriented",
     description:
       "Delivering results is something I prioritize keeping the vision strong while understanding there's always room to grow. I am always welcome to feedback as, there is always something to learn in this exciting field!",
   },
   {
-    icon: Eye,
+    icon: MagnifyingGlassPlusIcon,
     title: "Attention to Detail",
     description:
       "Every detail of code matters to me. When it comes to the finer grains of programming, I will always pay close attention to my work making sure I am keen on avoiding unecessary vulnerabilities and keeping code clean, modular, and readibility.",
@@ -143,7 +147,12 @@ export default function About() {
 
                       <div className="relative w-full h-full rounded-xl overflow-hidden bg-white/50 border-2 border-[#4DA8DA]/40">
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <item.icon className="w-7 h-7 text-[#0b5f8a] relative z-10" />
+                          <item.icon
+                            size={30}
+                            weight="duotone"
+                            aria-hidden="true"
+                            className="text-[#0b5f8a] relative z-10"
+                          />
                         </div>
                       </div>
                     </div>
