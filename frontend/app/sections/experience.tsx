@@ -200,20 +200,20 @@ export default function Experience() {
                         />
                         <span>{isOpen ? "Hide Details" : "Show Details"}</span>
                       </button>
-
-
-                        {isOpen && (
-                          <div
-                            id={`experience-details-${exp.id}`}
-                            className="overflow-hidden"
-                          >
-                            <div className="my-6 h-px bg-slate-300/60" />
-                            <p className="text-slate-700 leading-relaxed text-sm md:text-base">
-                              {exp.moreInfo}
-                            </p>
-                          </div>
-                        )}
-
+                      <div
+                        id={`experience-details-${exp.id}`}
+                        className="details-panel"
+                        data-open={isOpen}
+                        aria-hidden={!isOpen}
+                        inert={!isOpen}
+                      >
+                        <div className="min-h-0 overflow-hidden">
+                          <div className="my-6 h-px bg-slate-300/60" />
+                          <p className="text-slate-700 leading-relaxed text-sm md:text-base">
+                            {exp.moreInfo}
+                          </p>
+                        </div>
+                      </div>
                     </GlassSurface>
                   </div>
 
