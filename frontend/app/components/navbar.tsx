@@ -57,29 +57,27 @@ export default function Navbar() {
       aria-label="Primary navigation"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-[padding] duration-450 ease-in-out ${
         scrolled ? "py-4" : "py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <GlassSurface
           tone={isOverHero ? "dark" : "light"}
-          className="items-center justify-between px-6 py-3 transition-colors duration-300"
+          className="navbar-glass items-center justify-between px-6 py-3"
           style={{ display: "flex", borderRadius: "9999px" }}
         >
           <div className="flex-shrink-0 flex items-center">
             <a
               href="#home"
               onClick={(e) => scrollToSection(e, "#home")}
-              className={`inline-block rounded-lg font-bold text-2xl tracking-tighter cursor-pointer transition-colors duration-300 ${
+              className={`inline-block rounded-lg font-bold text-2xl tracking-tighter cursor-pointer ${
                 isOverHero ? "text-white" : "text-gray-800"
               }`}
             >
               Hemanta
               <span
-                className={`transition-colors duration-300 ${
-                  isOverHero ? "text-white" : "text-[#0b5f8a]"
-                }`}
+                className={isOverHero ? "text-white" : "text-[#0b5f8a]"}
               >
                 .Regmi
               </span>
@@ -93,7 +91,7 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => scrollToSection(e, item.href)}
-                  className={`inline-flex px-2 lg:px-3 py-2 rounded-full text-base font-semibold transition-all cursor-pointer ${
+                  className={`inline-flex px-2 lg:px-3 py-2 rounded-full text-base font-semibold cursor-pointer ${
                     isOverHero
                       ? "text-white hover:bg-black/20 hover:text-white"
                       : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
@@ -109,7 +107,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => scrollToSection(e, "#contact")}
-              className={`backdrop-blur-2xl px-4 lg:px-5 py-2 rounded-full text-base font-bold transition-all border-2 border-white/50 shadow-[0_4px_12px_rgba(0,0,0,0.1)] flex items-center gap-2 cursor-pointer ${
+              className={`backdrop-blur-2xl px-4 lg:px-5 py-2 rounded-full text-base font-bold border-2 border-white/50 shadow-[0_4px_12px_rgba(0,0,0,0.1)] flex items-center gap-2 cursor-pointer ${
                 isOverHero
                   ? "bg-black/20 hover:bg-black/30 text-white hover:text-white"
                   : "bg-white/40 hover:bg-white/60 text-gray-800 hover:text-[#0b5f8a] hover:border-[#0b5f8a]/30"
@@ -125,7 +123,7 @@ export default function Navbar() {
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
               aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-              className={`inline-flex min-h-11 min-w-11 items-center justify-center p-2 rounded-md cursor-pointer transition-colors ${
+              className={`inline-flex min-h-11 min-w-11 items-center justify-center p-2 rounded-md cursor-pointer ${
                 isOverHero
                   ? "text-white hover:text-white"
                   : "text-gray-700 hover:text-gray-900"
@@ -151,7 +149,7 @@ export default function Navbar() {
         >
           <GlassSurface
             tone={isOverHero ? "dark" : "light"}
-            className="px-2 pt-2 pb-3 space-y-1 sm:px-3"
+            className="navbar-glass px-2 pt-2 pb-3 space-y-1 sm:px-3"
             style={{ borderRadius: "1rem" }}
           >
             {navItems.map((item) => (
@@ -159,7 +157,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className={`block px-3 py-3 rounded-xl text-lg font-semibold transition-all cursor-pointer ${
+                className={`block px-3 py-3 rounded-xl text-lg font-semibold cursor-pointer ${
                   isOverHero
                     ? "text-white hover:bg-black/20 hover:text-white"
                     : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
