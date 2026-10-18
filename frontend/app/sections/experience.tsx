@@ -79,19 +79,13 @@ export default function Experience() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <h2
             className="text-4xl md:text-5xl font-extrabold text-slate-800 mb-8 drop-shadow-sm"
           >
             Experience & Education
-          </motion.h2>
+          </h2>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+          <div
             className="max-w-3xl mx-auto space-y-6 text-lg text-slate-600 leading-relaxed font-medium"
           >
             <p>
@@ -101,7 +95,7 @@ export default function Experience() {
               requirements into technical realities, particularly within the
               healthcare and research sectors.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Timeline */}
@@ -116,12 +110,8 @@ export default function Experience() {
               const isUtHealthLogo = exp.logo.includes("ut-health-logo");
 
               return (
-                <motion.div
+                <div
                   key={exp.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
                   className={`relative flex flex-col md:flex-row items-center justify-between group w-full ${
                     index % 2 === 0 ? "md:flex-row-reverse" : ""
                   }`}
@@ -234,7 +224,7 @@ export default function Experience() {
 
                   {/* Spacer for alternate layout */}
                   <div className="hidden md:block w-full md:w-[45%]" />
-                </motion.div>
+                </div>
               );
             })}
           </div>

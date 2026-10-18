@@ -9,19 +9,14 @@ import { GlassSurface } from "@/components/glassSurface";
 
 interface ProjectCardProps {
   project: Project;
-  index: number;
   onMoreInfo: () => void;
 }
 
-export function ProjectCard({ project, index, onMoreInfo }: ProjectCardProps) {
+export function ProjectCard({ project, onMoreInfo }: ProjectCardProps) {
   const [showTooltip, setShowTooltip] = useState<string | null>(null);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+    <div
       className="group relative h-full"
     >
       {/* Outer glow */}
@@ -146,6 +141,6 @@ export function ProjectCard({ project, index, onMoreInfo }: ProjectCardProps) {
           )}
         </div>
       </GlassSurface>
-    </motion.div>
+    </div>
   );
 }

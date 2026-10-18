@@ -17,10 +17,7 @@ export default function Contact() {
       <div className="absolute inset-0 bg-linear-to-t from-[#3B9DD8]/20 via-transparent to-transparent pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
           className="text-center mb-16"
         >
           <h2
@@ -38,18 +35,14 @@ export default function Contact() {
           >
             Interested in collaborating or have a question? My inbox is open.
           </p>
-        </motion.div>
+        </div>
 
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Contact Info Cards */}
           <div className="grid md:grid-cols-2 gap-6">
             {/* Email Card */}
-            <motion.a
+            <a
               href="mailto:hemantaregmi20@gmail.com"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
               className="relative block rounded-3xl group cursor-pointer"
             >
               <div className="absolute -inset-1 bg-linear-to-br  rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
@@ -69,14 +62,10 @@ export default function Contact() {
                   </div>
                 </div>
               </GlassSurface>
-            </motion.a>
+            </a>
 
             {/* Location Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+            <div
               className="relative group"
             >
               <div className="absolute -inset-1 bg-linear-to-br  rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
@@ -94,15 +83,11 @@ export default function Contact() {
                   </div>
                 </div>
               </GlassSurface>
-            </motion.div>
+            </div>
           </div>
 
           {/* Social Links - Horizontal Liquid Glass Bubbles */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
+          <div
             className="flex gap-6 justify-center items-center pt-4"
           >
             {/* GitHub Bubble */}
@@ -198,14 +183,10 @@ export default function Contact() {
                 </div>
               </motion.div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+          <div
             className="relative group w-full"
           >
             {/* Outer glow */}
@@ -301,7 +282,7 @@ export default function Contact() {
                 </button>
               </form>
             </GlassSurface>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

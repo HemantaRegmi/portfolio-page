@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import { Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 import { GlassSurface } from "@/components/glassSurface";
@@ -14,10 +13,7 @@ export default function Education() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <h2
             className="text-4xl md:text-5xl font-extrabold mb-8"
             style={{
               fontFamily: "var(--font-space-grotesk), sans-serif",
@@ -25,15 +21,11 @@ export default function Education() {
             }}
           >
             Education
-          </motion.h2>
+          </h2>
         </div>
 
         {/* Georgia Tech */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+        <div
           className="max-w-4xl mx-auto mb-8 relative group"
         >
           <div className="absolute -inset-1 bg-linear-to-br rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
@@ -64,14 +56,10 @@ export default function Education() {
               <span>Spring 2027 - Present</span>
             </div>
           </GlassSurface>
-        </motion.div>
+        </div>
 
         {/* UT Dallas */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+        <div
           className="max-w-4xl mx-auto relative group"
         >
           {/* Outer glow */}
@@ -129,7 +117,7 @@ export default function Education() {
               </div>
             </div>
           </GlassSurface>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

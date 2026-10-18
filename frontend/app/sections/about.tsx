@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import Image from "next/image";
 import { HandshakeIcon } from "@phosphor-icons/react/dist/csr/Handshake";
 import { ChatsCircleIcon } from "@phosphor-icons/react/dist/csr/ChatsCircle";
@@ -49,11 +48,7 @@ export default function About() {
       className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
           className="text-center mb-16"
         >
           <h2
@@ -63,15 +58,11 @@ export default function About() {
             About Me
           </h2>
           <div className="w-24 h-1 bg-linear-to-r  mx-auto rounded-full" />
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left column: Profile Image & Bio */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+          <div
             className="space-y-6"
           >
             {/* Profile image */}
@@ -113,23 +104,15 @@ export default function About() {
                 the latest technologies and practices within the tech industry.
               </p>
             </GlassSurface>
-          </motion.div>
+          </div>
 
           {/* Right column: Soft Skills Grid */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
+          <div
             className="space-y-4"
           >
-            {softSkills.map((item, index) => (
-              <motion.div
+            {softSkills.map((item) => (
+              <div
                 key={item.title}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                viewport={{ once: true }}
                 className="relative group"
               >
                 <GlassSurface interactive className="p-5">
@@ -153,9 +136,9 @@ export default function About() {
                     </div>
                   </div>
                 </GlassSurface>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

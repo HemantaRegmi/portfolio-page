@@ -346,30 +346,21 @@ export default function Skills() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <h2
             className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800"
             style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
             Technical Arsenal
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+          </h2>
+          <p
             className="text-xl max-w-2xl mx-auto font-medium text-gray-700"
           >
             Search through my repertoire of languages, frameworks, and tools.
-          </motion.p>
+          </p>
         </div>
 
         {/* Search Bar - Dark Glass style */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
           className="max-w-2xl mx-auto mb-16 relative group"
         >
           <div className="absolute inset-0 bg-linear-to-r from-[#3B9DD8] to-[#4DA8DA] rounded-full blur-xl group-hover:blur-2xl transition-all duration-300 opacity-20" />
@@ -400,7 +391,7 @@ export default function Skills() {
               </button>
             )}
           </GlassSurface>
-        </motion.div>
+        </div>
 
         <p className="sr-only" role="status">
           {filteredSkills.length} skill{filteredSkills.length === 1 ? "" : "s"} found
@@ -408,7 +399,7 @@ export default function Skills() {
 
         {/* Honeycomb Skills Grid */}
         <div id="skills-results" className="relative min-h-150 flex items-center justify-center">
-          <AnimatePresence mode="wait">
+          <AnimatePresence initial={false} mode="wait">
             {filteredSkills.length === 0 ? (
               <motion.div
                 key="no-results"

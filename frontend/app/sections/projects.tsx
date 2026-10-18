@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "motion/react";
+import { AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { type Project, ProjectModal, projects } from "@/data/projectData";
 import { ProjectCard } from "@/components/projectCard";
@@ -17,10 +17,7 @@ export function Projects() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <h2
             className="text-4xl md:text-5xl font-extrabold mb-8"
             style={{
               fontFamily: "var(--font-space-grotesk), sans-serif",
@@ -28,28 +25,24 @@ export function Projects() {
             }}
           >
             Featured Projects
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <p
             className="max-w-3xl mx-auto text-lg leading-relaxed font-medium"
             style={{ color: "#2d3748" }}
           >
             A collection of projects showcasing my expertise in full-stack
             development, machine learning, cloud infrastructure, and modern web
             technologies.
-          </motion.p>
+          </p>
         </div>
 
         {/* Projects grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <ProjectCard
               key={project.title}
               project={project}
-              index={index}
               onMoreInfo={() => setSelectedProject(project)}
             />
           ))}
