@@ -457,7 +457,7 @@ export default function Skills() {
                         d={borderPath}
                         fill="none"
                         stroke="#9fcfe7"
-                        strokeWidth="3"
+                        strokeWidth="4"
                         className="hexagon-stroke"
                       />
                     </svg>
