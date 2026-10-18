@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
+import { GlassSurface } from "@/components/glassSurface";
 
 export default function Education() {
   return (
@@ -37,7 +38,7 @@ export default function Education() {
         >
           <div className="absolute -inset-1 bg-linear-to-br rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
 
-          <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] transition-all duration-300 overflow-hidden">
+          <GlassSurface interactive className="p-8 md:p-10 overflow-hidden">
             <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-6 mb-6">
               <div className="relative w-20 h-20 shrink-0">
                 <Image
@@ -62,7 +63,7 @@ export default function Education() {
               <Calendar className="w-4 h-4 text-[#0b5f8a]" />
               <span>Spring 2027 - Present</span>
             </div>
-          </div>
+          </GlassSurface>
         </motion.div>
 
         {/* UT Dallas */}
@@ -77,7 +78,7 @@ export default function Education() {
           <div className="absolute -inset-1 bg-linear-to-br rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
 
           {/* Main card with light glass effect */}
-          <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] transition-all duration-300 overflow-hidden">
+          <GlassSurface interactive className="p-8 md:p-10 overflow-hidden">
             <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-6 mb-6">
               {/* University Logo/Icon */}
               <div className="relative w-20 h-20 shrink-0">
@@ -127,7 +128,7 @@ export default function Education() {
                 <span>• Machine Learning</span>
               </div>
             </div>
-          </div>
+          </GlassSurface>
         </motion.div>
       </div>
     </section>

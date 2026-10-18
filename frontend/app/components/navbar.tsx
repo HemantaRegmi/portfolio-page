@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { GlassSurface } from "@/components/glassSurface";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -61,12 +62,10 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          className={`flex items-center justify-between rounded-full backdrop-blur-3xl border-2 px-6 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] transition-colors duration-300 ${
-            isOverHero
-              ? "bg-black/25 border-white/30"
-              : "bg-white/25 border-white/40"
-          }`}
+        <GlassSurface
+          tone={isOverHero ? "dark" : "light"}
+          className="items-center justify-between rounded-full px-6 py-3 transition-colors duration-300"
+          style={{ display: "flex" }}
         >
           <div className="flex-shrink-0 flex items-center">
             <a
@@ -139,7 +138,7 @@ export default function Navbar() {
               )}
             </button>
           </div>
-        </div>
+        </GlassSurface>
       </div>
 
       {/* Mobile menu */}
@@ -150,12 +149,9 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden mt-2 px-4"
         >
-          <div
-            className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 rounded-2xl backdrop-blur-3xl border-2 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] ${
-              isOverHero
-                ? "bg-black/30 border-white/30"
-                : "bg-white/25 border-white/40"
-            }`}
+          <GlassSurface
+            tone={isOverHero ? "dark" : "light"}
+            className="px-2 pt-2 pb-3 space-y-1 sm:px-3 rounded-2xl"
           >
             {navItems.map((item) => (
               <a
@@ -171,7 +167,7 @@ export default function Navbar() {
                 {item.name}
               </a>
             ))}
-          </div>
+          </GlassSurface>
         </motion.div>
       )}
     </motion.nav>

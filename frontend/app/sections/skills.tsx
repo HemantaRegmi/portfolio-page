@@ -1,5 +1,7 @@
 "use client";
 
+import { GlassSurface } from "@/components/glassSurface";
+
 import { useState, useMemo, type ReactNode } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
@@ -371,7 +373,10 @@ export default function Skills() {
           className="max-w-2xl mx-auto mb-16 relative group"
         >
           <div className="absolute inset-0 bg-linear-to-r from-[#3B9DD8] to-[#4DA8DA] rounded-full blur-xl group-hover:blur-2xl transition-all duration-300 opacity-20" />
-          <div className="relative flex items-center bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] overflow-hidden p-2">
+          <GlassSurface
+            className="items-center rounded-full p-2 focus-within:ring-2 focus-within:ring-[#0b5f8a]/40"
+            style={{ display: "flex" }}
+          >
             <Search className="w-6 h-6 text-[#4DA8DA] ml-4 mr-2" />
             <input
               id="skill-search"
@@ -393,7 +398,7 @@ export default function Skills() {
                 Clear
               </button>
             )}
-          </div>
+          </GlassSurface>
         </motion.div>
 
         <p className="sr-only" role="status">
@@ -409,7 +414,7 @@ export default function Skills() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="flex flex-col items-center justify-center text-gray-600 py-20 bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl shadow-[0_8px_24px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] px-12"
+                className="glass-surface flex flex-col items-center justify-center text-gray-600 py-20 px-12"
               >
                 <Search className="w-12 h-12 mb-4 opacity-40 text-[#4DA8DA]" />
                 <p className="text-xl font-medium">

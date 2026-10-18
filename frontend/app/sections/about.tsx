@@ -7,6 +7,7 @@ import { ChatsCircleIcon } from "@phosphor-icons/react/dist/csr/ChatsCircle";
 import { ArrowsClockwiseIcon } from "@phosphor-icons/react/dist/csr/ArrowsClockwise";
 import { TargetIcon } from "@phosphor-icons/react/dist/csr/Target";
 import { MagnifyingGlassPlusIcon } from "@phosphor-icons/react/dist/csr/MagnifyingGlassPlus";
+import { GlassSurface } from "@/components/glassSurface";
 
 const softSkills = [
   {
@@ -73,14 +74,10 @@ export default function About() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            {/* Profile Image - Dark Glassmorphic Frame */}
+            {/* Profile image */}
             <div className="flex justify-center lg:justify-start mb-8">
               <div className="relative group">
-                {/* Outer glow ring */}
-                <div className="absolute -inset-1 bg-linear-to-r rounded-full opacity-30 blur-lg group-hover:opacity-50 transition duration-500"></div>
-
-                {/* Glassmorphic border */}
-                <div className="relative w-64 h-64 rounded-full p-2 bg-[rgba(255,255,255,0.01)] backdrop-blur-xl border-2 border-[rgba(255,255,255,0.05)] shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+                <div className="glass-surface w-64 h-64 rounded-full p-2">
                   <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-[rgba(255,255,255,0.05)] shadow-inner bg-linear-to-br backdrop-blur-sm">
                     <Image
                       src="/images/profile-image.png"
@@ -95,7 +92,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-8 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)]">
+            <GlassSurface className="p-8">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 I am a{" "}
                 <span className="font-bold text-[#0b5f8a]">
@@ -115,7 +112,7 @@ export default function About() {
                 lifecycle is something I truly enjoy. Making sure I keep up with
                 the latest technologies and practices within the tech industry.
               </p>
-            </div>
+            </GlassSurface>
           </motion.div>
 
           {/* Right column: Soft Skills Grid */}
@@ -135,26 +132,15 @@ export default function About() {
                 viewport={{ once: true }}
                 className="relative group"
               >
-                {/* Outer glow effect on hover */}
-                <div className="absolute -inset-1 bg-linear-to-br  rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
-
-                {/* Light glassmorphic card */}
-                <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-5 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_12px_40px_rgba(77,168,218,0.2)] transition-all duration-300">
+                <GlassSurface interactive className="p-5">
                   <div className="flex items-start gap-4">
-                    {/* Icon container with light glass effect */}
-                    <div className="relative w-14 h-14 shrink-0">
-                      <div className="absolute inset-0 bg-linear-to-br rounded-xl opacity-60 blur-md"></div>
-
-                      <div className="relative w-full h-full rounded-xl overflow-hidden bg-white/50 border-2 border-[#4DA8DA]/40">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <item.icon
-                            size={30}
-                            weight="duotone"
-                            aria-hidden="true"
-                            className="text-[#0b5f8a] relative z-10"
-                          />
-                        </div>
-                      </div>
+                    <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl border border-white/90 bg-linear-to-br from-white/90 to-sky-100/60 shadow-[0_3px_10px_rgba(21,48,63,0.08),inset_0_1px_0_white]">
+                      <item.icon
+                        size={30}
+                        weight="duotone"
+                        aria-hidden="true"
+                        className="text-[#0b5f8a]"
+                      />
                     </div>
 
                     <div className="flex-1 min-w-0">
@@ -166,7 +152,7 @@ export default function About() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </GlassSurface>
               </motion.div>
             ))}
           </motion.div>

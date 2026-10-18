@@ -5,6 +5,7 @@ import { Github, ExternalLink, Info, Calendar } from "lucide-react";
 import { useState } from "react";
 import type { Project } from "@/data/projectData";
 import Image from "next/image";
+import { GlassSurface } from "@/components/glassSurface";
 
 interface ProjectCardProps {
   project: Project;
@@ -27,7 +28,11 @@ export function ProjectCard({ project, index, onMoreInfo }: ProjectCardProps) {
       <div className="absolute -inset-1 bg-linear-to-br  rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500" />
 
       {/* Main card */}
-      <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-8 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] transition-all duration-300 overflow-hidden h-full flex flex-col">
+      <GlassSurface
+        interactive
+        className="p-8 overflow-hidden h-full flex-col"
+        style={{ display: "flex" }}
+      >
         {/* Project Image */}
         <div className="relative z-10 mb-6 -mx-8 -mt-8">
           <div className="relative w-full h-48 overflow-hidden rounded-t-3xl">
@@ -140,7 +145,7 @@ export function ProjectCard({ project, index, onMoreInfo }: ProjectCardProps) {
             </div>
           )}
         </div>
-      </div>
+      </GlassSurface>
     </motion.div>
   );
 }

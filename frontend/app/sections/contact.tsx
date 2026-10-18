@@ -5,6 +5,7 @@ import { Mail, Github, Linkedin, ArrowRight, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { siteConfig } from "@/utils/site";
+import { GlassSurface } from "@/components/glassSurface";
 
 export default function Contact() {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
@@ -53,7 +54,7 @@ export default function Contact() {
             >
               <div className="absolute -inset-1 bg-linear-to-br  rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
 
-              <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] transition-all duration-300">
+              <GlassSurface interactive className="p-6">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-2xl bg-linear-to-br  flex items-center justify-center shrink-0">
                     <Mail className="w-7 h-7 text-[#0b5f8a]" />
@@ -67,7 +68,7 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </GlassSurface>
             </motion.a>
 
             {/* Location Card */}
@@ -80,7 +81,7 @@ export default function Contact() {
             >
               <div className="absolute -inset-1 bg-linear-to-br  rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
 
-              <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] hover:shadow-[0_16px_48px_rgba(77,168,218,0.2)] transition-all duration-300">
+              <GlassSurface interactive className="p-6">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-2xl bg-linear-to-br  flex items-center justify-center shrink-0">
                     <MapPin className="w-7 h-7 text-[#0b5f8a]" />
@@ -92,7 +93,7 @@ export default function Contact() {
                     <div className="text-gray-800 font-bold">Houston, TX</div>
                   </div>
                 </div>
-              </div>
+              </GlassSurface>
             </motion.div>
           </div>
 
@@ -216,7 +217,7 @@ export default function Contact() {
 
             {/* Main form card with light glass effect */}
 
-            <div className="relative bg-white/25 backdrop-blur-2xl border-2 border-white/40 rounded-3xl p-8 lg:p-10 shadow-[0_16px_48px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.8)] overflow-hidden">
+            <GlassSurface className="p-8 lg:p-10 overflow-hidden">
               <form
                 className="relative z-10 space-y-6"
                 onSubmit={handleSubmit}
@@ -303,7 +304,7 @@ export default function Contact() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </form>
-            </div>
+            </GlassSurface>
           </motion.div>
         </div>
       </div>
